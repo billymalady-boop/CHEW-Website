@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHEW — Central Texas Site Services | Land Clearing, Grading, Debris Removal</title>
+  <meta name="description" content="Clearing, Hauling, Earthwork & Waste Removal. Serving Coryell, Bell, and Lampasas counties. Call 737-235-1335 for a free estimate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --yellow: #F5C400;
+      --red:    #CC2222;
+      --black:  #1a1a1a;
+      --bg:     #0d0d0d;
+      --white:  #FFFFFF;
+      --gray:   #888;
+      --light:  #ccc;
+      --border: rgba(245,196,0,0.18);
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body:    'Barlow', sans-serif;
+    }
+
+    /* ── RESET ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ── UTILITY ── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 13px 28px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-primary:hover { background: #ffd633; transform: translateY(-1px); }
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--yellow);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      border: 2px solid var(--yellow);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .btn-outline:hover { background: var(--yellow); color: var(--black); }
+
+    /* ── NAV ── */
+    #nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--black);
+      border-bottom: 3px solid var(--yellow);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    /* Logo: if logo.png exists it shows; otherwise falls back to text mark */
+    .nav-logo-img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+    .nav-logo-fallback {
+      display: none; /* hidden when image loads; shown via JS onerror */
+    }
+    .nav-logo-fallback .chew-word {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--yellow);
+      letter-spacing: 3px;
+      line-height: 1;
+    }
+    .nav-logo-fallback .chew-sub {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gray);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-links a {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--light);
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--yellow); }
+    .nav-cta { margin-left: 16px; }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: 0.2s;
+    }
+    .mobile-menu {
+      display: none;
+      background: var(--black);
+      padding: 16px 24px 24px;
+      border-top: 1px solid var(--border);
+    }
+    .mobile-menu a {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--light);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu .btn-primary { margin-top: 16px; width: 100%; text-align: center; }
+
+    /* ── HERO ── */
+    #hero {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 79px,
+          rgba(245,196,0,0.03) 80px
+        );
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 72px 24px 80px;
+      position: relative;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      margin-bottom: 20px;
+    }
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(48px, 7vw, 88px);
+      font-weight: 900;
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      margin-bottom: 24px;
+    }
+    .hero-headline em {
+      font-style: normal;
+      color: var(--yellow);
+      display: block;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: var(--light);
+      max-width: 560px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .hero-phone {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--yellow);
+      letter-spacing: 1px;
+    }
+    .hero-phone span { color: var(--gray); font-size: 13px; display: block; font-weight: 400; letter-spacing: 0; margin-bottom: 2px; }
+
+    /* ── TRUST BAR ── */
+    #trust {
+      background: var(--yellow);
+      padding: 0;
+    }
+    .trust-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 28px 16px 0;
+      margin-right: 28px;
+      border-right: 1px solid rgba(26,26,26,0.2);
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--black);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .trust-item:last-child { border-right: none; margin-right: 0; }
+    .trust-icon { font-size: 18px; }
+
+    /* ── SERVICES ── */
+    #services {
+      padding: 80px 0;
+    }
+    .section-label {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 50px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin-bottom: 48px;
+    }
+    .section-title span { color: var(--yellow); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .service-card {
+      background: var(--black);
+      padding: 32px 28px;
+      border-top: 3px solid transparent;
+      transition: border-color 0.2s, background 0.2s;
+      cursor: default;
+    }
+    .service-card:hover {
+      border-top-color: var(--yellow);
+      background: #222;
+    }
+    .service-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .service-name {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .service-desc {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.65;
+    }
+
+    /* ── WHY CHEW ── */
+    #why {
+      background: var(--black);
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .why-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .why-left {}
+    .why-statement {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--white);
+      margin-bottom: 24px;
+      padding-left: 20px;
+      border-left: 4px solid var(--yellow);
+    }
+    .why-body {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .why-right {}
+    .why-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .pillar {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .pillar:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
+    .pillar-num {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--yellow);
+      line-height: 1;
+      min-width: 36px;
+    }
+    .pillar-text {}
+    .pillar-title {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .pillar-desc {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* ── SERVICE AREA ── */
+    #area {
+      padding: 80px 0;
+    }
+    .area-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .county-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 40px;
+    }
+    .county-card {
+      background: var(--black);
+      padding: 28px 24px;
+      border-left: 4px solid var(--red);
+    }
+    .county-name {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .county-towns {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.8;
+    }
+    .area-note {
+      margin-top: 24px;
+      font-size: 14px;
+      color: var(--gray);
+    }
+    .area-note strong { color: var(--yellow); }
+
+    /* ── QUOTE FORM ── */
+    #quote {
+      background: var(--black);
+      padding: 80px 0;
+      border-top: 3px solid var(--yellow);
+    }
+    .quote-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .quote-left {}
+    .quote-left .section-title { margin-bottom: 16px; }
+    .quote-desc {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .quote-details {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .quote-detail-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--light);
+    }
+    .qd-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(245,196,0,0.1);
+      border: 1px solid var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .quote-form-wrap {}
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 15px;
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color 0.15s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--yellow);
+    }
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+    }
+    .form-group select option { background: var(--black); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-submit { width: 100%; text-align: center; margin-top: 8px; }
+    .form-note {
+      font-size: 12px;
+      color: var(--gray);
+      margin-top: 10px;
+      text-align: center;
+    }
+    #form-success {
+      display: none;
+      background: rgba(245,196,0,0.1);
+      border: 1px solid var(--yellow);
+      padding: 20px;
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--yellow);
+      margin-top: 16px;
+    }
+
+    /* ── FOOTER ── */
+    #footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 48px 0 24px;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+    .footer-brand .chew-word {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--yellow);
+      letter-spacing: 4px;
+      line-height: 1;
+    }
+    .footer-brand .chew-full {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gray);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+      margin-bottom: 16px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li {
+      font-size: 14px;
+      color: var(--gray);
+      padding: 4px 0;
+      line-height: 1.5;
+    }
+    .footer-col ul li a { color: var(--gray); transition: color 0.15s; }
+    .footer-col ul li a:hover { color: var(--yellow); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .footer-bottom p {
+      font-size: 12px;
+      color: var(--gray);
+    }
+    .footer-lic {
+      font-size: 12px;
+      color: var(--gray);
+      text-align: right;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu.open { display: block; }
+      .hero-inner { padding: 48px 24px 56px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .why-inner { grid-template-columns: 1fr; gap: 40px; }
+      .county-list { grid-template-columns: 1fr; }
+      .quote-inner { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-lic { text-align: center; }
+      .trust-inner { gap: 0; }
+      .trust-item { padding: 12px 16px 12px 0; margin-right: 16px; font-size: 11px; }
+    }
+    @media (max-width: 480px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<header id="nav">
+  <nav class="nav-inner">
+    <a href="#" class="nav-brand" aria-label="CHEW Central Texas Site Services">
+      <!-- Drop logo.png into the same folder as this file to activate the image logo -->
+      <img
+        src="logo.png"
+        alt="CHEW — Central Texas Site Services"
+        class="nav-logo-img"
+        onerror="this.style.display='none'; document.querySelector('.nav-logo-fallback').style.display='block';"
+      />
+      <div class="nav-logo-fallback">
+        <div class="chew-word">CHEW</div>
+        <div class="chew-sub">Central Texas Site Services</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why CHEW</a>
+      <a href="#area">Service Area</a>
+      <a href="#quote" class="btn-primary nav-cta">Free Estimate</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#why" onclick="closeMobile()">Why CHEW</a>
+    <a href="#area" onclick="closeMobile()">Service Area</a>
+    <a href="#quote" class="btn-primary" onclick="closeMobile()">Free Estimate</a>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Coryell · Bell · Lampasas Counties</div>
+    <h1 class="hero-headline">
+      We Clear It.<br>
+      <em>We Haul It.</em>
+      We Show Up.
+    </h1>
+    <p class="hero-sub">
+      Land clearing, site prep, gravel driveways, debris removal, and grading — done right with a JCB track loader and a crew that shows up when we say we will.
+    </p>
+    <div class="hero-actions">
+      <a href="#quote" class="btn-primary">Request a Free Estimate</a>
+      <div class="hero-phone">
+        <span>Call or Text</span>
+        <a href="tel:7372351335">737-235-1335</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ── -->
+<div id="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-icon">✔</span> JCB Track Loader</div>
+    <div class="trust-item"><span class="trust-icon">✔</span> Licensed &amp; Insured</div>
+    <div class="trust-item"><span class="trust-icon">✔</span> Free Estimates</div>
+    <div class="trust-item"><span class="trust-icon">✔</span> No Job Too Remote</div>
+    <div class="trust-item"><span class="trust-icon">✔</span> Same-Week Scheduling</div>
+  </div>
+</div>
+
+<!-- ── SERVICES ── -->
+<section id="services">
+  <div class="container">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Site Services That <span>Get Done</span></h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <span class="service-icon">🌲</span>
+        <div class="service-name">Land &amp; Brush Clearing</div>
+        <p class="service-desc">Cedar, mesquite, heavy brush, and overgrown fence lines — cut, shredded, or hauled off. We clear small cedars and thick brush with the right attachment for your terrain.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">🪨</span>
+        <div class="service-name">Gravel Driveways</div>
+        <p class="service-desc">New gravel installations, regrading washed-out driveways, and material delivery. Crusher run, ¾" stone, or screenings — properly crowned and drained to last.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">🏗️</span>
+        <div class="service-name">Site Prep &amp; Grading</div>
+        <p class="service-desc">Rough grading, cut and fill, and soil movement for new construction, outbuildings, pads, and pasture improvement. We get the ground ready.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">🚛</span>
+        <div class="service-name">Debris Removal</div>
+        <p class="service-desc">Yard waste, brush piles, old fencing, concrete, and demolition debris hauled away clean. Loaded with the machine — no hand-picking wheelbarrow work.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">🏚️</span>
+        <div class="service-name">Light Demo &amp; Clean Up</div>
+        <p class="service-desc">Old structures, sheds, outbuildings — we knock it down and haul it off. Full site cleanup included so you're not left with a pile to deal with.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">📦</span>
+        <div class="service-name">Material Delivery &amp; Spreading</div>
+        <p class="service-desc">Gravel, fill dirt, and base material delivered and spread where you need it. One call covers delivery and machine work — no coordinating two separate contractors.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY CHEW ── -->
+<section id="why">
+  <div class="why-inner">
+    <div class="why-left">
+      <div class="section-label">Why CHEW</div>
+      <h2 class="section-title">Built on <span>Dependability</span></h2>
+      <p class="why-statement">Too many homeowners have been burned by unreliable contractors. CHEW was built to change that.</p>
+      <p class="why-body">Central Texas property owners shouldn't have to chase down contractors, wonder if they're showing up, or get surprise invoices. We built CHEW around one principle: if we say we're coming, we're coming — and the work gets done right the first time.</p>
+      <a href="tel:7372351335" class="btn-outline">Call 737-235-1335</a>
+    </div>
+    <div class="why-right">
+      <div class="why-pillars">
+        <div class="pillar">
+          <div class="pillar-num">01</div>
+          <div class="pillar-text">
+            <div class="pillar-title">We Show Up</div>
+            <p class="pillar-desc">You'll get a confirmation before the job and a call if anything changes. No ghosting, no excuses.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">02</div>
+          <div class="pillar-text">
+            <div class="pillar-title">Written Quotes</div>
+            <p class="pillar-desc">You get a detailed written estimate before we start — scope, price, and what's included. No surprises on invoice day.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">03</div>
+          <div class="pillar-text">
+            <div class="pillar-title">Right Equipment</div>
+            <p class="pillar-desc">A JCB compact track loader purpose-built for Central Texas terrain. Minimal ground disturbance, maximum capability.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">04</div>
+          <div class="pillar-text">
+            <div class="pillar-title">Licensed &amp; Insured</div>
+            <p class="pillar-desc">Fully insured with general liability and commercial auto. We protect your property and ours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICE AREA ── -->
+<section id="area">
+  <div class="area-inner">
+    <div class="section-label">Where We Work</div>
+    <h2 class="section-title">60-Mile Radius from <span>Coryell County</span></h2>
+    <div class="county-list">
+      <div class="county-card">
+        <div class="county-name">Coryell County</div>
+        <div class="county-towns">Gatesville · Copperas Cove · Evant · Oglesby · Jonesboro · McGregor area</div>
+      </div>
+      <div class="county-card">
+        <div class="county-name">Bell County</div>
+        <div class="county-towns">Killeen · Temple · Belton · Harker Heights · Nolanville · Salado</div>
+      </div>
+      <div class="county-card">
+        <div class="county-name">Lampasas County</div>
+        <div class="county-towns">Lampasas · Lometa · Kempner · Adamsville · surrounding ranch land</div>
+      </div>
+    </div>
+    <p class="area-note">Not sure if you're in our range? <strong>Call or text 737-235-1335</strong> — we'll tell you straight.</p>
+  </div>
+</section>
+
+<!-- ── QUOTE FORM ── -->
+<section id="quote">
+  <div class="quote-inner">
+    <div class="quote-left">
+      <div class="section-label">Get Started</div>
+      <h2 class="section-title">Free <span>Estimate</span></h2>
+      <p class="quote-desc">
+        Tell us about your project. To ensure your estimate is as accurate as possible, we'll call to gather details. <strong style="color:var(--white)">Final quote is provided after site visit.</strong>
+      </p>
+      <div class="quote-details">
+        <div class="quote-detail-item">
+          <div class="qd-icon">📞</div>
+          We'll call you within 24 hours
+        </div>
+        <div class="quote-detail-item">
+          <div class="qd-icon">📋</div>
+          Written quote before any work starts
+        </div>
+        <div class="quote-detail-item">
+          <div class="qd-icon">🔒</div>
+          No obligation — no pressure
+        </div>
+        <div class="quote-detail-item">
+          <div class="qd-icon">📍</div>
+          Serving 60-mile radius of Coryell County
+        </div>
+      </div>
+    </div>
+    <div class="quote-form-wrap">
+      <!--
+        FORMSPREE SETUP (one-time, takes 2 minutes):
+        1. Go to formspree.io and create a free account
+        2. Create a new form → get your endpoint URL (looks like https://formspree.io/f/xabc1234)
+        3. Replace "YOUR_FORMSPREE_ID" below with your actual form ID
+        4. Formspree will email you at chew.earthworks@gmail.com for every submission
+      -->
+      <form id="quote-form" action="https://formspree.io/f/xkoepjqn" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(254) 555-0100" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service…</option>
+            <option>Land &amp; Brush Clearing</option>
+            <option>Gravel Driveway — New or Regrading</option>
+            <option>Site Prep &amp; Grading</option>
+            <option>Debris Removal</option>
+            <option>Light Demo &amp; Clean Up</option>
+            <option>Material Delivery &amp; Spreading</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="description">Tell Us About Your Project</label>
+          <textarea id="description" name="description" placeholder="Describe the work — size of the area, what needs to be cleared or moved, any access challenges, timeline, etc." required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New Estimate Request — CHEW" />
+        <input type="text" name="_gotcha" style="display:none" />
+        <button type="submit" class="btn-primary form-submit">Request My Estimate</button>
+        <p class="form-note">We typically respond within 24 hours.</p>
+      </form>
+      <div id="form-success">✔ Request received! We'll call you within 24 hours.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="chew-word">CHEW</div>
+        <div class="chew-full">Clearing · Hauling · Earthwork · Waste Removal</div>
+        <p>Central Texas Site Services. Serving Coryell, Bell, and Lampasas counties with dependable land clearing, grading, debris removal, and site prep.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li>Land &amp; Brush Clearing</li>
+          <li>Gravel Driveways</li>
+          <li>Site Prep &amp; Grading</li>
+          <li>Debris Removal</li>
+          <li>Light Demo &amp; Clean Up</li>
+          <li>Material Delivery</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:7372351335">737-235-1335</a></li>
+          <li><a href="mailto:chew.earthworks@gmail.com">chew.earthworks@gmail.com</a></li>
+          <li>Coryell County, TX</li>
+          <li style="margin-top:12px; color: var(--gray); font-size:13px;">Mon–Sat · 7am–6pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CHEW — Central Texas Site Services. All rights reserved.</p>
+      <p class="footer-lic">Licensed &amp; Insured · Coryell County, TX</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ── JS ── -->
+<script>
+  // Mobile menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  function closeMobile() { mobileMenu.classList.remove('open'); }
+
+  // Formspree AJAX submission
+  const form = document.getElementById('quote-form');
+  const success = document.getElementById('form-success');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          alert('Something went wrong. Please call us directly at 737-235-1335.');
+        }
+      } catch {
+        alert('Something went wrong. Please call us directly at 737-235-1335.');
+      }
+    });
+  }
+
+  // Smooth active nav highlighting
+  const sections = document.querySelectorAll('section[id], div[id="trust"]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? '#F5C400' : '';
+    });
+  });
+</script>
+
+</body>
+</html>
