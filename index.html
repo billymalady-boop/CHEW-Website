@@ -92,14 +92,8 @@
       align-items: center;
       gap: 12px;
     }
-    /* Logo: if logo.png exists it shows; otherwise falls back to text mark */
-    .nav-logo-img {
-      height: 48px;
-      width: auto;
-      display: block;
-    }
     .nav-logo-fallback {
-      display: none; /* hidden when image loads; shown via JS onerror */
+      display: block;
     }
     .nav-logo-fallback .chew-word {
       font-family: var(--font-display);
@@ -133,7 +127,9 @@
       transition: color 0.15s;
     }
     .nav-links a:hover { color: var(--yellow); }
-    .nav-cta { margin-left: 16px; }
+    .nav-cta { margin-left: 16px; color: var(--black) !important; background: var(--yellow) !important; }
+    .nav-cta:hover { background: #ffd633 !important; color: var(--black) !important; }
+    .nav-logo-img { height: 56px; width: auto; }
     .hamburger {
       display: none;
       background: none;
@@ -195,6 +191,27 @@
       margin: 0 auto;
       padding: 72px 24px 80px;
       position: relative;
+      display: flex;
+      flex-direction: row;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-content {
+      flex: 1.2;
+      min-width: 0;
+    }
+    .hero-logo-panel {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+    }
+    .hero-logo-panel img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      filter: drop-shadow(0 8px 40px rgba(245,196,0,0.25));
     }
     .hero-badge {
       display: inline-block;
@@ -632,6 +649,10 @@
     }
 
     /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-logo-panel { display: none; }
+    }
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .nav-cta { display: none; }
@@ -661,14 +682,7 @@
 <header id="nav">
   <nav class="nav-inner">
     <a href="#" class="nav-brand" aria-label="CHEW Central Texas Site Services">
-      <!-- Drop logo.png into the same folder as this file to activate the image logo -->
-      <img
-        src="logo.png"
-        alt="CHEW — Central Texas Site Services"
-        class="nav-logo-img"
-        onerror="this.style.display='none'; document.querySelector('.nav-logo-fallback').style.display='block';"
-      />
-      <div class="nav-logo-fallback">
+      <div class="nav-logo-fallback" style="display:block">
         <div class="chew-word">CHEW</div>
         <div class="chew-sub">Central Texas Site Services</div>
       </div>
@@ -694,21 +708,26 @@
 <!-- ── HERO ── -->
 <section id="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Coryell · Bell · Lampasas Counties</div>
-    <h1 class="hero-headline">
-      We Clear It.<br>
-      <em>We Haul It.</em>
-      We Show Up.
-    </h1>
-    <p class="hero-sub">
-      Land clearing, site prep, gravel driveways, debris removal, and grading — done right with a JCB track loader and a crew that shows up when we say we will.
-    </p>
-    <div class="hero-actions">
-      <a href="#quote" class="btn-primary">Request a Free Estimate</a>
-      <div class="hero-phone">
-        <span>Call or Text</span>
-        <a href="tel:7372351335">737-235-1335</a>
+    <div class="hero-content">
+      <div class="hero-badge">Coryell · Bell · Lampasas Counties</div>
+      <h1 class="hero-headline">
+        We Clear It.<br>
+        <em>We Haul It.</em>
+        We Show Up.
+      </h1>
+      <p class="hero-sub">
+        Land clearing, site prep, gravel driveways, debris removal, and grading — done right with a JCB track loader and a crew that shows up when we say we will.
+      </p>
+      <div class="hero-actions">
+        <a href="#quote" class="btn-primary">Request a Free Estimate</a>
+        <div class="hero-phone">
+          <span>Call or Text</span>
+          <a href="tel:7372351335">737-235-1335</a>
+        </div>
       </div>
+    </div>
+    <div class="hero-logo-panel">
+      <img src="logo.png" alt="CHEW Central Texas Site Services" />
     </div>
   </div>
 </section>
