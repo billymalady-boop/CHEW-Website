@@ -601,6 +601,132 @@
       border: none;
     }
 
+
+    /* ── CLEAR & KEEP ── */
+    #clearkeep {
+      padding: 80px 0;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+    }
+    .ck-intro {
+      max-width: 680px;
+      margin-bottom: 48px;
+    }
+    .ck-intro .why-statement {
+      margin-bottom: 16px;
+    }
+    .ck-intro p {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.8;
+    }
+    .ck-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      margin-bottom: 32px;
+    }
+    .ck-card {
+      background: var(--black);
+      padding: 32px 28px;
+      border-top: 4px solid transparent;
+      position: relative;
+    }
+    .ck-card.featured {
+      border-top-color: var(--yellow);
+    }
+    .ck-card.basic { border-top-color: #555; }
+    .ck-card.premium { border-top-color: var(--red); }
+    .ck-badge {
+      position: absolute;
+      top: -1px;
+      right: 20px;
+      background: var(--yellow);
+      color: var(--black);
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+    }
+    .ck-tier {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+    .ck-name {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .ck-visits {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--yellow);
+      line-height: 1;
+    }
+    .ck-visits span {
+      font-size: 16px;
+      color: var(--gray);
+      font-weight: 400;
+      display: block;
+      margin-top: 4px;
+    }
+    .ck-discount {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--white);
+      margin: 20px 0 16px;
+    }
+    .ck-discount em {
+      font-style: normal;
+      color: var(--yellow);
+    }
+    .ck-features {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+    .ck-features li {
+      font-size: 14px;
+      color: var(--gray);
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ck-features li::before {
+      content: '✓';
+      color: var(--yellow);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .ck-note {
+      background: rgba(245,196,0,0.06);
+      border: 1px solid var(--border);
+      padding: 20px 24px;
+      margin-top: 8px;
+    }
+    .ck-note p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    .ck-note strong { color: var(--white); }
+    @media (max-width: 768px) {
+      .ck-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── GALLERY ── */
     #gallery {
       padding: 80px 0;
@@ -816,6 +942,7 @@
     </a>
     <div class="nav-links">
       <a href="#services">Services</a>
+      <a href="#clearkeep">Care Plan</a>
       <a href="#why">Why CHEW</a>
       <a href="#video">Video</a>
       <a href="#gallery">Gallery</a>
@@ -828,6 +955,7 @@
   </nav>
   <div class="mobile-menu" id="mobile-menu">
     <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#clearkeep" onclick="closeMobile()">Care Plan</a>
     <a href="#why" onclick="closeMobile()">Why CHEW</a>
     <a href="#video" onclick="closeMobile()">Video</a>
     <a href="#gallery" onclick="closeMobile()">Gallery</a>
@@ -1084,6 +1212,71 @@
     </div>
   </div>
 </section>
+
+<!-- ── CLEAR & KEEP ── -->
+<section id="clearkeep">
+  <div class="container">
+    <div class="section-label">Subscription Service</div>
+    <h2 class="section-title">CHEW Clear &amp; Keep <span>Plan</span></h2>
+    <div class="ck-intro">
+      <p class="why-statement">Cedar doesn't stop growing in the off-season. Neither do we.</p>
+      <p>The CHEW Clear &amp; Keep Plan puts your property on a scheduled maintenance program. We contact you before every visit, your rate is locked for 12 months, and you never have to hunt down a contractor again. Up to <strong style="color:var(--yellow)">25% off</strong> standard rates.</p>
+    </div>
+    <div class="ck-grid">
+
+      <div class="ck-card basic">
+        <div class="ck-tier">Basic</div>
+        <div class="ck-name">Clear &amp; Keep Basic</div>
+        <div class="ck-visits">2<span>visits per year</span></div>
+        <div class="ck-discount"><em>5% off</em> every visit</div>
+        <ul class="ck-features">
+          <li>Scheduled service — we call ahead</li>
+          <li>Rate locked 12 months</li>
+          <li>Priority scheduling</li>
+          <li>10% cash discount stackable</li>
+          <li>5% pay-in-full discount stackable</li>
+        </ul>
+        <a href="#quote" class="btn-outline" style="width:100%; text-align:center; display:block;">Get Started</a>
+      </div>
+
+      <div class="ck-card featured">
+        <div class="ck-badge">Most Popular</div>
+        <div class="ck-tier">Standard</div>
+        <div class="ck-name">Clear &amp; Keep Standard</div>
+        <div class="ck-visits">4<span>visits per year</span></div>
+        <div class="ck-discount"><em>10% off</em> every visit</div>
+        <ul class="ck-features">
+          <li>Scheduled service — we call ahead</li>
+          <li>Rate locked 12 months</li>
+          <li>Priority scheduling</li>
+          <li>10% cash discount stackable</li>
+          <li>5% pay-in-full discount stackable</li>
+        </ul>
+        <a href="#quote" class="btn-primary" style="width:100%; text-align:center; display:block;">Get Started</a>
+      </div>
+
+      <div class="ck-card premium">
+        <div class="ck-tier">Premium</div>
+        <div class="ck-name">Clear &amp; Keep Premium</div>
+        <div class="ck-visits">6<span>visits per year</span></div>
+        <div class="ck-discount"><em>15% off</em> every visit</div>
+        <ul class="ck-features">
+          <li>Scheduled service — we call ahead</li>
+          <li>Rate locked 12 months</li>
+          <li>Priority scheduling</li>
+          <li>10% cash discount stackable</li>
+          <li>5% pay-in-full discount stackable</li>
+        </ul>
+        <a href="#quote" class="btn-outline" style="width:100%; text-align:center; display:block;">Get Started</a>
+      </div>
+
+    </div>
+    <div class="ck-note">
+      <p><strong>How it works:</strong> Select your plan, sign a simple service agreement, and CHEW handles the rest. We reach out before each scheduled visit to confirm scope and timing. Maximum combined discount is 25%. Pricing based on scope of work determined at site visit — plan discount applies to all recurring visits.</p>
+    </div>
+  </div>
+</section>
+
 
 <!-- ── GALLERY ── -->
 <section id="gallery">
