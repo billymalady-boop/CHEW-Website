@@ -515,6 +515,139 @@
     .gallery-grid { grid-template-columns: 1fr; }
   }
 
+
+  /* ── CLEAR & KEEP PLAN FULL ── */
+  #clearkeep {
+    padding: 80px 0;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+  }
+  .ck-intro {
+    max-width: 720px;
+    margin-bottom: 48px;
+  }
+  .ck-intro .why-statement {
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 900;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .ck-intro .why-statement span { color: var(--yellow); }
+  .ck-intro p {
+    font-size: 16px;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+  .ck-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    margin-bottom: 24px;
+  }
+  .ck-card {
+    background: var(--black);
+    padding: 32px 28px;
+    border-top: 4px solid #333;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .ck-card.basic { border-top-color: #555; }
+  .ck-card.featured { border-top-color: var(--yellow); }
+  .ck-card.premium { border-top-color: var(--red); }
+  .ck-badge {
+    display: inline-block;
+    background: var(--yellow);
+    color: #000;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    align-self: flex-start;
+  }
+  .ck-tier {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: #666;
+    text-transform: uppercase;
+  }
+  .ck-name {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .ck-visits {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--yellow);
+    line-height: 1;
+  }
+  .ck-visits span {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .ck-discount {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .ck-discount em {
+    font-style: normal;
+    color: var(--yellow);
+  }
+  .ck-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+    flex: 1;
+  }
+  .ck-features li {
+    font-size: 14px;
+    color: #999;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .ck-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--yellow);
+    font-weight: 700;
+  }
+  .ck-note {
+    background: #111;
+    border-left: 3px solid var(--yellow);
+    padding: 20px 24px;
+    margin-top: 4px;
+  }
+  .ck-note p {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.7;
+  }
+  .ck-note strong { color: var(--white); }
+  @media (max-width: 768px) {
+    .ck-grid { grid-template-columns: 1fr; }
+  }
+
 </style>
 </head>
 <body>
@@ -728,38 +861,77 @@
 
     </div><!-- end offers-grid -->
 
-    <!-- CLEAR & KEEP PLAN -->
-    <div class="ckp-block">
-      <div class="ckp-left">
-        <div class="offer-label">PROPERTY MAINTENANCE SUBSCRIPTION</div>
-        <div class="offer-icon"><i class="ti ti-clipboard-check"></i></div>
-        <div class="offer-name">THE CLEAR &amp; KEEP PLAN<span class="tm">&trade;</span></div>
-        <div class="offer-subtitle">Scheduled Property Maintenance</div>
-        <p class="ckp-why">Finding a dependable contractor in Central Texas is harder than the work itself. You've been burned before. Everyone has. The Clear &amp; Keep Plan locks in a contractor you can trust before you need one — at a rate that rewards you for planning ahead.</p>
-        <p class="ckp-how">Pick your plan. Sign a simple service agreement. We contact you before every visit to confirm scope. Your rate is locked for 12 months. Priority scheduling over non-subscribers. Maximum 25% combined discount.</p>
-        <a href="#quote" class="offer-cta" style="align-self:flex-start;">Ask About The Plan</a>
-      </div>
-      <div class="ckp-right">
-        <div class="ckp-tier">
-          <div class="ckp-tier-name">BASIC</div>
-          <div class="ckp-visits">2 visits / year</div>
-          <div class="ckp-discount">5% off every job</div>
-        </div>
-        <div class="ckp-tier ckp-tier-featured">
-          <div class="ckp-badge">MOST POPULAR</div>
-          <div class="ckp-tier-name">STANDARD</div>
-          <div class="ckp-visits">4 visits / year</div>
-          <div class="ckp-discount">10% off every job</div>
-        </div>
-        <div class="ckp-tier">
-          <div class="ckp-tier-name">PREMIUM</div>
-          <div class="ckp-visits">6 visits / year</div>
-          <div class="ckp-discount">15% off every job</div>
-        </div>
-      </div>
+  </div><!-- end container -->
+</section>
+
+<!-- CLEAR & KEEP PLAN -->
+<section id="clearkeep">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">PROPERTY MAINTENANCE SUBSCRIPTION</span>
+      <h2>The Clear &amp; Keep Plan&trade;</h2>
+    </div>
+    <div class="ck-intro">
+      <div class="why-statement">Tired of <span>hunting down a contractor</span> every time your property needs work?</div>
+      <p>In Central Texas, finding someone dependable is harder than the work itself. You call, they don't show. You schedule, they cancel. You pay a deposit and never see them again. We've heard it on every job we've done.</p>
+      <p>The CHEW Clear &amp; Keep Plan puts your property on a scheduled maintenance program. We contact you before every visit, your rate is locked for 12 months, and you never have to hunt down a contractor again. Up to <strong style="color:var(--yellow)">25% off</strong> standard rates.</p>
     </div>
 
-  </div><!-- end container -->
+    <div class="ck-grid">
+
+      <div class="ck-card basic">
+        <div class="ck-tier">Basic Plan</div>
+        <div class="ck-name">Clear &amp; Keep Basic</div>
+        <div class="ck-visits">2<span>visits per year</span></div>
+        <div class="ck-discount"><em>5% off</em> every visit</div>
+        <ul class="ck-features">
+          <li>Scheduled service — we call ahead</li>
+          <li>Rate locked 12 months</li>
+          <li>Priority scheduling</li>
+          <li>10% cash discount stackable</li>
+          <li>5% pay-in-full discount stackable</li>
+        </ul>
+        <a href="#quote" class="offer-cta" style="text-align:center;margin-top:16px;">Get Started</a>
+      </div>
+
+      <div class="ck-card featured">
+        <div class="ck-badge">Most Popular</div>
+        <div class="ck-tier">Standard Plan</div>
+        <div class="ck-name">Clear &amp; Keep Standard</div>
+        <div class="ck-visits">4<span>visits per year</span></div>
+        <div class="ck-discount"><em>10% off</em> every visit</div>
+        <ul class="ck-features">
+          <li>Scheduled service — we call ahead</li>
+          <li>Rate locked 12 months</li>
+          <li>Priority scheduling</li>
+          <li>10% cash discount stackable</li>
+          <li>5% pay-in-full discount stackable</li>
+        </ul>
+        <a href="#quote" class="offer-cta" style="text-align:center;margin-top:16px;background:var(--yellow);border-color:var(--yellow);color:#000;">Get Started</a>
+      </div>
+
+      <div class="ck-card premium">
+        <div class="ck-tier">Premium Plan</div>
+        <div class="ck-name">Clear &amp; Keep Premium</div>
+        <div class="ck-visits">6<span>visits per year</span></div>
+        <div class="ck-discount"><em>15% off</em> every visit</div>
+        <ul class="ck-features">
+          <li>Scheduled service — we call ahead</li>
+          <li>Rate locked 12 months</li>
+          <li>Priority scheduling</li>
+          <li>10% cash discount stackable</li>
+          <li>5% pay-in-full discount stackable</li>
+        </ul>
+        <a href="#quote" class="offer-cta" style="text-align:center;margin-top:16px;">Get Started</a>
+      </div>
+
+    </div>
+
+    <div class="ck-note">
+      <p><strong>How it works:</strong> Select your plan, sign a simple service agreement through SignWell, and CHEW handles the rest. We reach out before each scheduled visit to confirm scope and timing. Discounts stack up to a maximum of 25% off standard rates. Pricing based on scope of work determined at site visit.</p>
+    </div>
+
+  </div>
 </section>
 
 <!-- WHY CHEW -->
@@ -834,39 +1006,39 @@
     </div>
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="conrete_busting.png" alt="Concrete busting" loading="lazy">
+        <img src="conrete_busting.jpg" alt="Concrete busting" loading="lazy">
         <div class="gallery-label">Concrete Busting</div>
       </div>
       <div class="gallery-item">
-        <img src="brush_clearing.png" alt="Brush clearing" loading="lazy">
+        <img src="brush_clearing.jpg" alt="Brush clearing" loading="lazy">
         <div class="gallery-label">Brush Clearing</div>
       </div>
       <div class="gallery-item">
-        <img src="fence_line_clearing.png" alt="Fence line clearing" loading="lazy">
+        <img src="fence_line_clearing.jpg" alt="Fence line clearing" loading="lazy">
         <div class="gallery-label">Fence Line Clearing</div>
       </div>
       <div class="gallery-item">
-        <img src="Debris_Clearing.png" alt="Debris clearing" loading="lazy">
+        <img src="Debris_Clearing.jpg" alt="Debris clearing" loading="lazy">
         <div class="gallery-label">Debris Clearing</div>
       </div>
       <div class="gallery-item">
-        <img src="Gravel_Drive.png" alt="Gravel driveway" loading="lazy">
+        <img src="Gravel_Drive.jpg" alt="Gravel driveway" loading="lazy">
         <div class="gallery-label">Gravel Driveway</div>
       </div>
       <div class="gallery-item">
-        <img src="Brush_removal.png" alt="Brush removal" loading="lazy">
+        <img src="Brush_removal.jpg" alt="Brush removal" loading="lazy">
         <div class="gallery-label">Brush Removal</div>
       </div>
       <div class="gallery-item">
-        <img src="Land_clear_1.png" alt="Land clearing" loading="lazy">
+        <img src="Land_clear_1.jpg" alt="Land clearing" loading="lazy">
         <div class="gallery-label">Land Clearing</div>
       </div>
       <div class="gallery-item">
-        <img src="brush_hogging.png" alt="Brush hogging" loading="lazy">
+        <img src="brush_hogging.jpg" alt="Brush hogging" loading="lazy">
         <div class="gallery-label">Brush Hogging</div>
       </div>
       <div class="gallery-item wide">
-        <img src="Demo.png" alt="Structure demolition" loading="lazy">
+        <img src="Demo.jpg" alt="Structure demolition" loading="lazy">
         <div class="gallery-label">Structure Demolition</div>
       </div>
     </div>
