@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CHEW — Clearing, Hauling, Earthwork, Waste Removal | Central Texas Site Services</title>
 <meta name="description" content="Central Texas site services — land clearing, debris removal, gravel driveways, material delivery, light grading, and demo cleanup. Serving Coryell, Bell, and Lampasas counties.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <style>
   :root {
     --yellow: #F5C400;
@@ -100,7 +101,7 @@
   }
   .hero-h1 span { color: var(--yellow); }
   .hero-sub {
-    font-size: 16px; color: #aaa; line-height: 1.75;
+    font-size: 18px; color: #aaa; line-height: 1.75;
     max-width: 480px; margin-bottom: 36px;
   }
   .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
@@ -140,7 +141,7 @@
     gap: 48px; flex-wrap: wrap;
   }
   .trust-item {
-    font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
     color: #000; text-transform: uppercase;
     display: flex; align-items: center; gap: 8px;
   }
@@ -167,7 +168,7 @@
     text-transform: uppercase; letter-spacing: 0.05em;
   }
   .section-sub {
-    font-size: 14px; color: #888; max-width: 560px;
+    font-size: 16px; color: #888; max-width: 560px;
     margin: 0 auto; line-height: 1.7;
   }
   .offers-grid {
@@ -185,23 +186,36 @@
     border-top-color: var(--yellow); background: #141414;
   }
   .offer-label {
-    font-size: 10px; font-weight: 700; letter-spacing: 0.18em;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
     color: #666; text-transform: uppercase;
   }
   .offer-name {
-    font-size: clamp(17px, 2vw, 21px); font-weight: 900;
+    font-size: clamp(20px, 2.2vw, 26px); font-weight: 900;
     color: var(--white); text-transform: uppercase;
     letter-spacing: 0.04em; line-height: 1.2;
   }
+  .offer-subtitle {
+    font-size: clamp(14px, 1.5vw, 16px); font-weight: 600;
+    color: var(--white); text-transform: uppercase;
+    letter-spacing: 0.06em; margin-top: -8px; opacity: 0.75;
+  }
+  .offer-icon {
+    font-size: 36px; line-height: 1; margin-bottom: 4px;
+  }
+  .offer-icon i {
+    font-size: 32px;
+    color: var(--yellow);
+    display: block;
+  }
   .tm { font-size: 11px; vertical-align: super; color: var(--yellow); }
-  .offer-why p { font-size: 13px; color: #999; line-height: 1.75; margin: 0; }
+  .offer-why p { font-size: 15px; color: #999; line-height: 1.75; margin: 0; }
   .offer-divider { height: 1px; background: #222; }
   .offer-what-label, .offer-how-label {
-    font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.16em;
     color: var(--yellow); margin-bottom: 8px;
   }
   .offer-what p, .offer-how p {
-    font-size: 13px; color: #aaa; line-height: 1.7; margin: 0;
+    font-size: 15px; color: #aaa; line-height: 1.7; margin: 0;
   }
   .offer-tiers { display: flex; flex-direction: column; gap: 10px; }
   .offer-tier {
@@ -212,11 +226,11 @@
     display: block; font-size: 10px; font-weight: 700;
     letter-spacing: 0.14em; color: var(--yellow); margin-bottom: 4px;
   }
-  .tier-desc { display: block; font-size: 12px; color: #888; line-height: 1.6; }
+  .tier-desc { display: block; font-size: 14px; color: #888; line-height: 1.6; }
   .offer-cta {
-    display: inline-block; margin-top: auto; padding: 10px 20px;
+    display: inline-block; margin-top: auto; padding: 12px 22px;
     background: transparent; border: 1px solid #444;
-    color: var(--white); font-size: 11px; font-weight: 700;
+    color: var(--white); font-size: 13px; font-weight: 700;
     letter-spacing: 0.14em; text-transform: uppercase;
     text-decoration: none; text-align: center; transition: all 0.2s;
   }
@@ -236,8 +250,8 @@
     padding: 40px 36px; display: flex;
     flex-direction: column; gap: 16px;
   }
-  .ckp-why { font-size: 14px; color: #999; line-height: 1.75; margin: 0; }
-  .ckp-how { font-size: 13px; color: #777; line-height: 1.7; margin: 0; }
+  .ckp-why { font-size: 16px; color: #999; line-height: 1.75; margin: 0; }
+  .ckp-how { font-size: 15px; color: #777; line-height: 1.7; margin: 0; }
   .ckp-right {
     padding: 40px 36px; display: flex; flex-direction: column;
     gap: 2px; background: #0d0d0d; justify-content: center;
@@ -249,8 +263,8 @@
     color: var(--yellow); margin-bottom: 6px;
   }
   .ckp-tier-name { font-size: 16px; font-weight: 900; color: var(--white); letter-spacing: 0.08em; }
-  .ckp-visits { font-size: 12px; color: #888; margin-top: 4px; }
-  .ckp-discount { font-size: 13px; font-weight: 700; color: var(--yellow); margin-top: 4px; }
+  .ckp-visits { font-size: 14px; color: #888; margin-top: 4px; }
+  .ckp-discount { font-size: 15px; font-weight: 700; color: var(--yellow); margin-top: 4px; }
 
   /* ── WHY CHEW ── */
   #why {
@@ -274,7 +288,7 @@
     font-size: 15px; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.1em; color: var(--white); margin-bottom: 10px;
   }
-  .why-body { font-size: 13px; color: #888; line-height: 1.7; }
+  .why-body { font-size: 15px; color: #888; line-height: 1.7; }
 
   /* ── SERVICE AREA ── */
   #area {
@@ -295,7 +309,7 @@
     letter-spacing: 0.08em; color: var(--yellow); margin-bottom: 8px;
   }
   .area-label { font-size: 11px; color: #666; letter-spacing: 0.14em; margin-bottom: 16px; }
-  .area-cities { font-size: 13px; color: #999; line-height: 1.8; }
+  .area-cities { font-size: 15px; color: #999; line-height: 1.8; }
 
   /* ── QUOTE FORM ── */
   #quote {
@@ -483,7 +497,9 @@
       <!-- 1. THE RECLAIM -->
       <div class="offer-card">
         <div class="offer-label">LAND CLEARING &amp; BRUSH REMOVAL</div>
+        <div class="offer-icon"><i class="ti ti-trees"></i></div>
         <div class="offer-name">THE RECLAIM<span class="tm">&trade;</span></div>
+        <div class="offer-subtitle">Land &amp; Brush Clearing</div>
         <div class="offer-why">
           <p>Overgrown land isn't just an eyesore — it's a fire hazard, a predator habitat, and acres of your property you're paying taxes on but can't use. Cedar spreads fast in Central Texas. What's manageable today is a problem next year.</p>
         </div>
@@ -502,7 +518,9 @@
       <!-- 2. THE CLEAR HAUL PACKAGE -->
       <div class="offer-card offer-featured">
         <div class="offer-label">DEBRIS REMOVAL &amp; DISPOSAL</div>
+        <div class="offer-icon"><i class="ti ti-trash"></i></div>
         <div class="offer-name">THE CLEAR HAUL PACKAGE<span class="tm">&trade;</span></div>
+        <div class="offer-subtitle">Debris Removal &amp; Hauling</div>
         <div class="offer-why">
           <p>That pile has been sitting there longer than you want to admit. Demo debris, brush piles, junk, old lumber — it's not going anywhere on its own and every day it sits it's taking up space you could be using.</p>
         </div>
@@ -521,7 +539,9 @@
       <!-- 3. THE ROAD READY PACKAGE -->
       <div class="offer-card">
         <div class="offer-label">GRAVEL DRIVEWAY REPAIR &amp; INSTALLATION</div>
+        <div class="offer-icon"><i class="ti ti-road"></i></div>
         <div class="offer-name">THE ROAD READY PACKAGE<span class="tm">&trade;</span></div>
+        <div class="offer-subtitle">Gravel Driveway Repair &amp; Install</div>
         <div class="offer-why">
           <p>A washed-out driveway beats up your vehicles, turns away visitors, and tells everyone your property isn't maintained. In Central Texas it gets worse fast. Gravel done right lasts years.</p>
         </div>
@@ -540,7 +560,9 @@
       <!-- 4. THE MATERIAL DROP -->
       <div class="offer-card">
         <div class="offer-label">MATERIAL DELIVERY</div>
+        <div class="offer-icon"><i class="ti ti-truck"></i></div>
         <div class="offer-name">THE MATERIAL DROP<span class="tm">&trade;</span></div>
+        <div class="offer-subtitle">Gravel, Dirt &amp; Rock Delivery</div>
         <div class="offer-why">
           <p>You need material on your property. You don't need the hassle of finding a supplier, figuring out quantities, and coordinating delivery. One call handles all of it.</p>
         </div>
@@ -568,7 +590,9 @@
       <!-- 5. THE LEVEL UP -->
       <div class="offer-card">
         <div class="offer-label">LOT LEVELING &amp; SITE GRADING</div>
+        <div class="offer-icon"><i class="ti ti-shovel"></i></div>
         <div class="offer-name">THE LEVEL UP<span class="tm">&trade;</span></div>
+        <div class="offer-subtitle">Lot Leveling &amp; Light Grading</div>
         <div class="offer-why">
           <p>An uneven lot costs you money — whether it's a building pad that won't sit right, low spots that hold water, or a yard that's rough on equipment and hard to maintain. Getting the grade right the first time saves headaches later.</p>
         </div>
@@ -587,7 +611,9 @@
       <!-- 6. THE TEAR DOWN -->
       <div class="offer-card">
         <div class="offer-label">LIGHT DEMOLITION &amp; SITE CLEANUP</div>
+        <div class="offer-icon"><i class="ti ti-building-warehouse"></i></div>
         <div class="offer-name">THE TEAR DOWN<span class="tm">&trade;</span></div>
+        <div class="offer-subtitle">Light Demo &amp; Site Cleanup</div>
         <div class="offer-why">
           <p>Old structures don't disappear on their own. They become liability, fire risk, snake habitat, and an eyesore on property you're trying to improve or sell. The longer they sit the worse they get.</p>
         </div>
@@ -609,7 +635,9 @@
     <div class="ckp-block">
       <div class="ckp-left">
         <div class="offer-label">PROPERTY MAINTENANCE SUBSCRIPTION</div>
+        <div class="offer-icon"><i class="ti ti-clipboard-check"></i></div>
         <div class="offer-name">THE CLEAR &amp; KEEP PLAN<span class="tm">&trade;</span></div>
+        <div class="offer-subtitle">Scheduled Property Maintenance</div>
         <p class="ckp-why">Finding a dependable contractor in Central Texas is harder than the work itself. You've been burned before. Everyone has. The Clear &amp; Keep Plan locks in a contractor you can trust before you need one — at a rate that rewards you for planning ahead.</p>
         <p class="ckp-how">Pick your plan. Sign a simple service agreement. We contact you before every visit to confirm scope. Your rate is locked for 12 months. Priority scheduling over non-subscribers. Maximum 25% combined discount.</p>
         <a href="#quote" class="offer-cta" style="align-self:flex-start;">Ask About The Plan</a>
