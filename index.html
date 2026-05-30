@@ -823,6 +823,99 @@
       .gallery-item.wide { grid-column: span 1; aspect-ratio: 1/1; }
     }
 
+
+    /* ── ABOUT ── */
+    #about {
+      padding: 80px 0;
+      background: var(--black);
+      border-top: 1px solid var(--border);
+    }
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .about-story {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.9;
+    }
+    .about-story p { margin-bottom: 18px; }
+    .about-story p:last-child { margin-bottom: 0; }
+    .about-right {}
+    .about-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 28px 24px;
+      margin-bottom: 3px;
+    }
+    .about-card-title {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--yellow);
+      margin-bottom: 10px;
+    }
+    .about-card-text {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.75;
+    }
+    @media (max-width: 768px) {
+      .about-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ── FAQ ── */
+    #faq {
+      padding: 80px 0;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 40px;
+    }
+    .faq-category {}
+    .faq-cat-title {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item {
+      margin-bottom: 24px;
+    }
+    .faq-q {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .faq-a {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.75;
+    }
+    @media (max-width: 768px) {
+      .faq-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
     /* ── FOOTER ── */
     #footer {
       background: var(--bg);
@@ -945,6 +1038,8 @@
       <a href="#services">Services</a>
       <a href="#clearkeep">Care Plan</a>
       <a href="#why">Why CHEW</a>
+      <a href="#about">Our Story</a>
+      <a href="#faq">FAQ</a>
       <a href="#video">Video</a>
       <a href="#gallery">Gallery</a>
       <a href="#area">Service Area</a>
@@ -958,6 +1053,8 @@
     <a href="#services" onclick="closeMobile()">Services</a>
     <a href="#clearkeep" onclick="closeMobile()">Care Plan</a>
     <a href="#why" onclick="closeMobile()">Why CHEW</a>
+    <a href="#about" onclick="closeMobile()">Our Story</a>
+    <a href="#faq" onclick="closeMobile()">FAQ</a>
     <a href="#video" onclick="closeMobile()">Video</a>
     <a href="#gallery" onclick="closeMobile()">Gallery</a>
     <a href="#area" onclick="closeMobile()">Service Area</a>
@@ -1466,6 +1563,117 @@
     </div>
   </div>
 </div>
+
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-left">
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">How CHEW <span>Got Started</span></h2>
+      <div class="about-story">
+        <p>I'm a Central Texas landowner. I know firsthand how fast this land gets overgrown and unusable. I know how we collect things thinking they'll come in handy someday, until one day you've got a pile, a barn or garage you can't use, and junk scattered across your property. I have a quarter-mile gravel drive that needs constant attention. I had old structures sitting there, a liability I kept ignoring, until I found rodents and rattlesnakes moving in.</p>
+        <p>Property is like a vehicle. Ignore it long enough and it costs you more than it ever should have.</p>
+        <p>So I bought a skid steer, got the attachments, and cleaned my place up. Then a friend asked for help. Then a neighbor. I found out I loved the work. When I retired, CHEW was the natural next step.</p>
+        <p>But there was another reason. Over the years I hired a lot of contractors. A few were excellent. Most weren't. They'd show up late, work a few hours, drag the job out, and ask for more money. Some did decent work and left their trash blowing across my property. I got tired of it.</p>
+        <p>I knew I could do better, not because I'm perfect, but because I commit, I show up, and I do the work. When mistakes happen, and they will, I own them and I fix them. That's what CHEW is built on.</p>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="about-card">
+        <div class="about-card-title">Why Choose CHEW?</div>
+        <div class="about-card-text">Because we show up. That sounds simple until you've called three contractors who never called back, or watched someone take a deposit and disappear. I'm a Central Texas landowner, one of you, and I built CHEW because I got tired of the same bad experiences you've had. Right equipment, right work ethic, and a crew that's there when we said we'd be. We commit, we show, we do.</div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-title">What Makes CHEW Different?</div>
+        <div class="about-card-text">One call, one crew, one machine. Whether you need brush cleared, a driveway fixed, debris hauled, or a site prepped, we handle it start to finish. No surprises on the invoice. Just the work done right and the property left clean.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq">
+  <div class="container">
+    <div class="section-label">Got Questions</div>
+    <h2 class="section-title">We've Got <span>Answers</span></h2>
+    <div class="faq-grid">
+
+      <div class="faq-category">
+        <div class="faq-cat-title">General</div>
+        <div class="faq-item">
+          <div class="faq-q">What areas do you service?</div>
+          <div class="faq-a">We serve Coryell, Bell, and Lampasas counties and surrounding communities within a 60-mile radius of Coryell County. Not sure if you're in range? Call or text 737-235-1335 and we'll tell you straight.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Are you insured?</div>
+          <div class="faq-a">Yes. We carry liability insurance for your protection and peace of mind.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How quickly can you start?</div>
+          <div class="faq-a">Most projects can be scheduled within a few days depending on workload and weather.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you offer free estimates?</div>
+          <div class="faq-a">Yes. Free, no-obligation estimates on every job. Final quote is provided after site visit.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I get a quote?</div>
+          <div class="faq-a">Call, text, email, or use the form on this page. Send photos of the project and in many cases we can provide a preliminary estimate before visiting the site.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What forms of payment do you accept?</div>
+          <div class="faq-a">Cash, credit and debit cards, Cash App, and Venmo. Ask about our cash discount.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you charge by the hour or by the job?</div>
+          <div class="faq-a">Most projects are quoted as a fixed price so you know the cost upfront. No surprises.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Are there hidden fees?</div>
+          <div class="faq-a">No. We discuss all expected costs before work begins.</div>
+        </div>
+      </div>
+
+      <div class="faq-category">
+        <div class="faq-cat-title">Services</div>
+        <div class="faq-item">
+          <div class="faq-q">Can you fix potholes and washouts?</div>
+          <div class="faq-a">Yes. We repair potholes, washouts, ruts, and related driveway damage. Many driveways can be restored by regrading existing material, saving you money on new gravel.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you deliver and spread material?</div>
+          <div class="faq-a">Yes. We deliver it, spread it, or both. Already have material on site? We'll spread it. No need to source it through us.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do I need to pile up my debris before you arrive?</div>
+          <div class="faq-a">No. We handle gathering, loading, hauling, and disposal. Leave it where it is.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What types of debris do you remove?</div>
+          <div class="faq-a">Construction debris, brush piles, old sheds, fencing, storm debris, and general property cleanup. Hazardous materials are excluded and flagged upfront.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you clear brush and small trees?</div>
+          <div class="faq-a">Yes. We clear small cedars, saplings, heavy brush, and overgrowth. Large tree removal is outside our current scope and we'll tell you upfront.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you mow overgrown fields and pastures?</div>
+          <div class="faq-a">Yes. We have a mega mower capable of reclaiming overgrown fields, pastures, and heavily vegetated areas.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you tear down old sheds and structures?</div>
+          <div class="faq-a">Yes. We demolish and remove sheds, playsets, and small outbuildings, then haul everything off and leave the site clean.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do I need a permit for demolition?</div>
+          <div class="faq-a">Permit requirements vary by location. We recommend checking with your county before work begins.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <!-- ── FOOTER ── -->
