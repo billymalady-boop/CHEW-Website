@@ -727,6 +727,37 @@
       .ck-grid { grid-template-columns: 1fr; }
     }
 
+
+    /* ── AD GALLERY ── */
+    .ad-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .ad-grid img {
+      width: 100%;
+      display: block;
+      border: 1px solid var(--border);
+      transition: transform 0.2s;
+    }
+    .ad-grid img:hover { transform: scale(1.02); }
+    .ad-section-label {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-top: 56px;
+      margin-bottom: 4px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+    @media (max-width: 768px) {
+      .ad-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── GALLERY ── */
     #gallery {
       padding: 80px 0;
@@ -1122,7 +1153,7 @@
         </span>
         <div class="service-name">The Clear Haul Package™</div>
         <div style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Debris Removal &amp; Disposal</div>
-        <p class="service-desc">That pile has been sitting there longer than you want to admit. We load it, haul it, and dispose of it properly. Residential and commercial. Household items to large piles requiring equipment. Some restrictions apply — hazardous materials excluded and flagged upfront.</p>
+        <p class="service-desc">That pile has been sitting there longer than you want to admit. We load it, haul it, and dispose of it properly. Residential and commercial. Household items to large piles requiring equipment. Estate and property cleanouts, storage unit cleanouts, storm debris removal, and general junk hauling. One call, one crew, one machine. Some restrictions apply — hazardous materials excluded and flagged upfront.</p>
       </div>
 
       <div class="service-card">
@@ -1654,7 +1685,7 @@
         </div>
         <div class="faq-item">
           <div class="faq-q">What types of debris do you remove?</div>
-          <div class="faq-a">Construction debris, brush piles, old sheds, fencing, storm debris, and general property cleanup. Hazardous materials are excluded and flagged upfront.</div>
+          <div class="faq-a">Construction debris, brush piles, old sheds, fencing, storm debris, estate and property cleanouts, storage unit cleanouts, and general junk hauling. Hazardous materials are excluded and flagged upfront.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Can you clear brush and small trees?</div>
