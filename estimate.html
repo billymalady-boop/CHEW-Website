@@ -145,9 +145,8 @@
       <div class="opt" data-v="furn"><span>Furniture &amp; appliances</span><span class="chk">✓</span></div>
       <div class="opt" data-v="heavy"><span>Some heavy material (wood, concrete, dirt)</span><span class="chk">✓</span></div>
     </div>
-    <div class="qlabel">Any of these? (optional)</div>
+    <div class="qlabel">Any of these? (check all that apply — optional)</div>
     <div class="opts two" data-q="special">
-      <div class="opt sel" data-v="none"><span>None</span><span class="chk">✓</span></div>
       <div class="opt" data-v="mattress"><span>Mattresses</span><span class="chk">✓</span></div>
       <div class="opt" data-v="appliance"><span>Fridge / AC</span><span class="chk">✓</span></div>
       <div class="opt" data-v="tires"><span>Tires</span><span class="chk">✓</span></div>
@@ -218,7 +217,7 @@
 </div>
 
 <script>
-  const A={service:null,full:null,type:null,special:'none'};
+  const A={service:null,full:null,type:null,special:[]};
 
   function wireQ(q,onPick){
     document.querySelectorAll('[data-q="'+q+'"] .opt').forEach(opt=>{
@@ -234,7 +233,20 @@
   wireQ('service',()=>{document.getElementById('b0').disabled=!A.service;});
   wireQ('full',()=>{document.getElementById('cb1').disabled=!A.full;});
   wireQ('type',()=>{document.getElementById('cb2').disabled=!A.type;});
-  wireQ('special');
+
+  // Multi-select for special items: toggle each on/off independently into A.special[]
+  document.querySelectorAll('[data-q="special"] .opt').forEach(opt=>{
+    opt.onclick=()=>{
+      const v=opt.dataset.v;
+      if(opt.classList.contains('sel')){
+        opt.classList.remove('sel');
+        A.special=A.special.filter(x=>x!==v);
+      } else {
+        opt.classList.add('sel');
+        A.special.push(v);
+      }
+    };
+  });
 
   function goTo(id){
     ['s0','c1','c2','c3','m1','done'].forEach(s=>document.getElementById(s).classList.add('hidden'));
@@ -276,8 +288,9 @@
     let cy=CENTER_CY[A.full];
     // material type nudges the effective volume/handling
     if(A.type==='heavy') cy*=1.15;     // heavy material = more cost to handle/dispose
-    // special-item disposal fees (added as flat $ after the volume math)
-    const fees={none:0,mattress:60,appliance:50,tires:40}[A.special];
+    // special-item disposal fees (sum every checked item)
+    const feeMap={mattress:60,appliance:50,tires:40};
+    const fees=A.special.reduce((sum,k)=>sum+(feeMap[k]||0),0);
     // real center number, then bracket ±20%
     const center=cy*RATE+fees;
     let lo=Math.max(FLOOR, center*(1-BRACKET));
@@ -288,7 +301,13 @@
     const fullTxt={few:'a few items',q1:'about a quarter-full two-car garage',half:'a half-full two-car garage',q3:'about a three-quarter-full two-car garage',packed:'a packed two-car garage'}[A.full];
     const typeTxt={house:'household items',furn:'furniture & appliances',heavy:'heavy material'}[A.type];
     let d='Based on '+fullTxt+' of '+typeTxt;
-    if(A.special!=='none') d+=' plus '+({mattress:'mattresses',appliance:'appliances',tires:'tires'}[A.special]);
+    if(A.special.length){
+      const names={mattress:'mattresses',appliance:'appliances',tires:'tires'};
+      const list=A.special.map(k=>names[k]);
+      const joined = list.length===1 ? list[0]
+        : list.slice(0,-1).join(', ')+' and '+list[list.length-1];
+      d+=' plus '+joined;
+    }
     d+='.';
     // multi-trip note for the biggest jobs (exceed one trailer load)
     if(A.full==='q3'||A.full==='packed') d+=' A space this size usually takes more than one load.';
