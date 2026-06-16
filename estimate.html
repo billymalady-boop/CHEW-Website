@@ -208,6 +208,93 @@
     <button class="back" onclick="goTo('s0')">← Start over</button>
   </div>
 
+  <!-- ============ LAND CLEARING / MULCHING GUIDED PATH ============ -->
+
+  <!-- LC STEP 1: acreage -->
+  <div class="card hidden" id="lc1">
+    <div class="dots"><div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+    <div class="qlabel">Roughly how much land needs clearing?</div>
+    <div class="opts" data-q="acre">
+      <div class="opt" data-v="Under 1/2 acre"><span>Under ½ acre</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="1/2 to 2 acres"><span>½ – 2 acres</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="2 to 5 acres"><span>2 – 5 acres</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="5 to 10 acres"><span>5 – 10 acres</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="10+ acres"><span>10+ acres</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="Not sure on acreage"><span>Not sure — you tell me</span><span class="chk">✓</span></div>
+    </div>
+    <button class="btn" id="lcb1" disabled>Next</button>
+    <button class="back" onclick="goTo('s0')">← Back</button>
+  </div>
+
+  <!-- LC STEP 2: density -->
+  <div class="card hidden" id="lc2">
+    <div class="dots"><div class="dot"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+    <div class="qlabel">How thick is it?</div>
+    <div class="opts" data-q="density">
+      <div class="opt" data-v="Light (scattered brush, walkable)"><span>Light — scattered brush, you can walk through it</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="Moderate (mixed brush and some cedar)"><span>Moderate — mixed brush and some cedar</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="Heavy (thick cedar/mesquite)"><span>Heavy — thick cedar/mesquite, can't walk through</span><span class="chk">✓</span></div>
+    </div>
+    <button class="btn" id="lcb2" disabled>Next</button>
+    <button class="back" onclick="goTo('lc1')">← Back</button>
+  </div>
+
+  <!-- LC STEP 3: tree size -->
+  <div class="card hidden" id="lc3">
+    <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>
+    <div class="qlabel">Any larger trees mixed in?</div>
+    <div class="opts" data-q="trees">
+      <div class="opt" data-v="Mostly brush and small stuff"><span>Mostly brush &amp; small stuff</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="Some trees up to ~8 inches"><span>Some trees up to about 8 inches</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="Bigger trees mixed in"><span>Bigger trees mixed in</span><span class="chk">✓</span></div>
+    </div>
+    <button class="btn" id="lcb3" disabled>Next</button>
+    <button class="back" onclick="goTo('lc2')">← Back</button>
+  </div>
+
+  <!-- LC STEP 4: ground (multi-select) -->
+  <div class="card hidden" id="lc4">
+    <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot on"></div><div class="dot"></div></div>
+    <div class="qlabel">What's the ground like?</div>
+    <div style="color:var(--gray);font-size:13px;margin:-6px 0 12px;">Tap all that apply.</div>
+    <div class="opts" data-q="ground">
+      <div class="opt" data-v="hilly"><span>Sloped or hilly</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="rocky"><span>Rocky or caliche</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="wet"><span>Wet or soft spots</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="tight access"><span>Tight access for a truck &amp; trailer</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="flat and open"><span>None of these — flat &amp; open</span><span class="chk">✓</span></div>
+    </div>
+    <button class="btn" id="lcb4">Next</button>
+    <button class="back" onclick="goTo('lc3')">← Back</button>
+  </div>
+
+  <!-- LC STEP 5: material + contact form -->
+  <div class="card hidden" id="lc5">
+    <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot on"></div></div>
+    <div class="qlabel">What should happen to the material?</div>
+    <div class="opts" data-q="material">
+      <div class="opt" data-v="Mulch in place"><span>Mulch it in place — leave the chips as ground cover</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="Haul it off"><span>Haul it off — clear it away completely</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="Advise at visit"><span>Not sure — advise me at the visit</span><span class="chk">✓</span></div>
+    </div>
+    <div class="disclaim" style="margin-top:22px;">We'll confirm everything on a <b style="color:var(--yellow)">free site visit</b> and hand you a firm written price before any work begins. No phone quotes, no surprises.</div>
+    <form id="clearing-form" action="https://formspree.io/f/xkoepjqn" method="POST">
+      <div class="form-row">
+        <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="John Smith" required /></div>
+        <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="(254) 555-0100" required /></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="you@example.com" required /></div>
+      <div class="form-group"><label>Property Address (city is fine)</label><input type="text" name="address" placeholder="Copperas Cove" required /></div>
+      <input type="hidden" name="service" id="lcService" value="" />
+      <input type="hidden" name="project_scope" id="lcScope" value="" />
+      <input type="hidden" name="_subject" value="New Land-Clearing Site Visit Request — CHEW" />
+      <input type="text" name="_gotcha" style="display:none" />
+      <button type="submit" class="btn yellow" id="lcSubmit" disabled>Book My Free Site Visit</button>
+      <p class="form-note">We typically respond within 24 hours.</p>
+    </form>
+    <button class="back" onclick="goTo('lc4')">← Back</button>
+  </div>
+
   <!-- shared success -->
   <div class="card hidden" id="done">
     <div id="form-success" style="display:block;">✔ Request received! We'll be in touch within 24 hours.<br><br>Need it faster? Text photos to <b style="color:var(--yellow)">737-235-1335</b>.</div>
@@ -234,6 +321,54 @@
   wireQ('full',()=>{document.getElementById('cb1').disabled=!A.full;});
   wireQ('type',()=>{document.getElementById('cb2').disabled=!A.type;});
 
+  // --- Land clearing guided flow ---
+  A.ground=[];
+  wireQ('acre',()=>{document.getElementById('lcb1').disabled=!A.acre;});
+  wireQ('density',()=>{document.getElementById('lcb2').disabled=!A.density;});
+  wireQ('trees',()=>{document.getElementById('lcb3').disabled=!A.trees;});
+  wireQ('material',()=>{document.getElementById('lcSubmit').disabled=!A.material; packScope();});
+
+  // ground multi-select (independent toggles; "flat and open" is exclusive)
+  document.querySelectorAll('[data-q="ground"] .opt').forEach(opt=>{
+    opt.onclick=()=>{
+      const v=opt.dataset.v;
+      if(v==='flat and open'){
+        const wasSel=opt.classList.contains('sel');
+        document.querySelectorAll('[data-q="ground"] .opt').forEach(o=>o.classList.remove('sel'));
+        A.ground=[];
+        if(!wasSel){ opt.classList.add('sel'); A.ground=['flat and open']; }
+      } else {
+        const flatOpt=document.querySelector('[data-q="ground"] .opt[data-v="flat and open"]');
+        if(flatOpt){flatOpt.classList.remove('sel');}
+        A.ground=A.ground.filter(x=>x!=='flat and open');
+        if(opt.classList.contains('sel')){
+          opt.classList.remove('sel');
+          A.ground=A.ground.filter(x=>x!==v);
+        } else {
+          opt.classList.add('sel');
+          A.ground.push(v);
+        }
+      }
+    };
+  });
+
+  document.getElementById('lcb1').onclick=()=>goTo('lc2');
+  document.getElementById('lcb2').onclick=()=>goTo('lc3');
+  document.getElementById('lcb3').onclick=()=>goTo('lc4');
+  document.getElementById('lcb4').onclick=()=>goTo('lc5');
+
+  function packScope(){
+    const g=(A.ground&&A.ground.length)?A.ground.join(', '):'standard ground';
+    const scope='Service picked: '+(A.pickerLabel||'Clearing')
+      +' | Acreage: '+(A.acre||'-')
+      +' | Density: '+(A.density||'-')
+      +' | Trees: '+(A.trees||'-')
+      +' | Ground: '+g
+      +' | Material: '+(A.material||'-');
+    document.getElementById('lcScope').value=scope;
+    document.getElementById('lcService').value=(A.pickerLabel||'Land Clearing');
+  }
+
   // Multi-select for special items: toggle each on/off independently into A.special[]
   document.querySelectorAll('[data-q="special"] .opt').forEach(opt=>{
     opt.onclick=()=>{
@@ -249,7 +384,7 @@
   });
 
   function goTo(id){
-    ['s0','c1','c2','c3','m1','done'].forEach(s=>document.getElementById(s).classList.add('hidden'));
+    ['s0','c1','c2','c3','m1','lc1','lc2','lc3','lc4','lc5','done'].forEach(s=>document.getElementById(s).classList.add('hidden'));
     document.getElementById(id).classList.remove('hidden');
     window.scrollTo(0,0);
   }
@@ -257,9 +392,14 @@
   // Service picker → route
   document.getElementById('b0').onclick=()=>{
     if(A.service==='cleanout'){ goTo('c1'); }
+    else if(A.service==='clearing'||A.service==='mulching'){
+      // both clearing and mulching → guided land-clearing flow
+      A.pickerLabel=(A.service==='mulching')?'Forestry Mulching':'Land & Brush Clearing';
+      goTo('lc1');
+    }
     else {
-      // machine work or other → site-walk form
-      const labels={clearing:'Land & Brush Clearing',mulching:'Forestry Mulching',gravel:'Gravel Driveway',grading:'Site Prep & Grading',other:'Other'};
+      // gravel, grading, other → site-walk form
+      const labels={gravel:'Gravel Driveway',grading:'Site Prep & Grading',other:'Other'};
       document.getElementById('walkService').value=labels[A.service]||'General';
       goTo('m1');
     }
@@ -329,6 +469,7 @@
   }
   ajaxForm('cleanout-form');
   ajaxForm('walk-form');
+  ajaxForm('clearing-form');
 </script>
 </body>
 </html>
