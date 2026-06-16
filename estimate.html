@@ -124,12 +124,13 @@
   <!-- STEP 1: how full -->
   <div class="card hidden" id="c1">
     <div class="dots"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>
-    <div class="qlabel">How full is the space?</div>
+    <div class="qlabel">How full is the space? (think of a two-car garage)</div>
     <div class="opts" data-q="full">
-      <div class="opt" data-v="light"><span>A few items / one corner</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="half"><span>About half full</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="full"><span>Full — one-car garage worth</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="packed"><span>Packed wall-to-wall / two-car</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="few"><span>A few items / one corner</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="q1"><span>About 1/4 full</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="half"><span>About 1/2 full</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="q3"><span>About 3/4 full</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="packed"><span>Packed — full two-car garage</span><span class="chk">✓</span></div>
     </div>
     <button class="btn" id="cb1" disabled>Next</button>
     <button class="back" onclick="goTo('s0')">← Back</button>
@@ -255,15 +256,22 @@
   document.getElementById('cb1').onclick=()=>goTo('c2');
   document.getElementById('cb2').onclick=()=>{calcRange();goTo('c3');};
 
-  // Range logic — built on REAL pricing: $65/cy at 75% utilization (nobody's
-  // 100% full), with the real number in the MIDDLE and a ±20% bracket around it.
-  // Center cubic-yards = expert "full" volumes × 75% realistic fill.
+  // Range logic — anchored to a FULL TWO-CAR GARAGE (~28 cy). Customer picks a
+  // fraction of that; "packed" caps at 85% since nothing's truly 100% full.
+  // Real $65/cy number sits in the MIDDLE, with a ±20% bracket around it.
   const RATE=65;            // your real $/cy
   const FLOOR=249;          // hard minimum
   const BRACKET=0.20;       // ±20% around the real center number
-  // Center volume (cy) per fullness, already at 75% realistic utilization:
-  //  corner ~4 · half ~9 · full 1-car ~15 · packed 2-car ~22
-  const CENTER_CY={light:4, half:9, full:15, packed:22};
+  const FULL_2CAR=28;       // cubic yards in a genuinely full two-car garage
+  // Center volume (cy) per fullness = fraction of a full two-car garage.
+  // few ~12% · 1/4 · 1/2 · 3/4 · packed 85% (never a true 100%)
+  const CENTER_CY={
+    few:    FULL_2CAR*0.12,   // ~3.4
+    q1:     FULL_2CAR*0.25,   // 7
+    half:   FULL_2CAR*0.50,   // 14
+    q3:     FULL_2CAR*0.75,   // 21
+    packed: FULL_2CAR*0.85    // ~24
+  };
   function calcRange(){
     let cy=CENTER_CY[A.full];
     // material type nudges the effective volume/handling
@@ -275,15 +283,15 @@
     let lo=Math.max(FLOOR, center*(1-BRACKET));
     let hi=center*(1+BRACKET);
     lo=Math.round(lo/25)*25; hi=Math.round(hi/25)*25;
-    const rangeStr='$'+lo.toLocaleString()+' – $'+hi.toLocaleString();
+    const rangeStr = (lo>=hi) ? ('$'+lo.toLocaleString()) : ('$'+lo.toLocaleString()+' – $'+hi.toLocaleString());
     document.getElementById('rangeOut').textContent=rangeStr;
-    const fullTxt={light:'a few items',half:'a half-full space',full:'a full one-car garage',packed:'a packed two-car garage'}[A.full];
+    const fullTxt={few:'a few items',q1:'about a quarter-full two-car garage',half:'a half-full two-car garage',q3:'about a three-quarter-full two-car garage',packed:'a packed two-car garage'}[A.full];
     const typeTxt={house:'household items',furn:'furniture & appliances',heavy:'heavy material'}[A.type];
     let d='Based on '+fullTxt+' of '+typeTxt;
     if(A.special!=='none') d+=' plus '+({mattress:'mattresses',appliance:'appliances',tires:'tires'}[A.special]);
     d+='.';
-    // multi-trip note for the biggest jobs (exceeds one trailer load)
-    if(A.full==='packed') d+=' A space this size usually takes more than one load.';
+    // multi-trip note for the biggest jobs (exceed one trailer load)
+    if(A.full==='q3'||A.full==='packed') d+=' A space this size usually takes more than one load.';
     document.getElementById('rangeDesc').textContent=d;
     // pass into the hidden form fields so the lead email includes them
     document.getElementById('hiddenRange').value=rangeStr;
