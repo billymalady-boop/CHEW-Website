@@ -79,6 +79,13 @@
 
   .site-walk-intro{background:#101010;border-radius:10px;padding:16px;margin-bottom:20px;border:1px solid var(--line);}
   .site-walk-intro b{color:var(--yellow);}
+  .tier{background:#101010;border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:12px;}
+  .tier-feature{border-color:var(--yellow);background:#1a1606;}
+  .tier-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:6px;}
+  .tier-name{font-family:var(--font-display);font-weight:800;font-size:20px;letter-spacing:.5px;}
+  .tier-price{font-family:var(--font-display);font-weight:900;font-size:22px;color:var(--yellow);white-space:nowrap;}
+  .tier-price .per{font-size:13px;color:var(--gray);font-weight:600;}
+  .tier-desc{color:#bbb;font-size:14px;line-height:1.5;}
 
   @media(max-width:600px){
     h1{font-size:36px;}
@@ -209,6 +216,36 @@
   </div>
 
   <!-- ============ LAND CLEARING / MULCHING GUIDED PATH ============ -->
+
+  <!-- LC STEP 0: tier pricing (anchor screen, shown before the guided flow) -->
+  <div class="card hidden" id="lc0">
+    <div class="section-label" style="text-align:center;">Three Ways We Clear Land</div>
+    <h2 style="text-align:center;font-family:var(--font-display);font-weight:900;font-size:26px;margin:6px 0 4px;">Pick the finish you want</h2>
+    <p class="sub" style="text-align:center;">Most jobs price around these starting points. We set your exact number at a free site walk.</p>
+
+    <div class="tier">
+      <div class="tier-head"><span class="tier-name">Brush Cut</span><span class="tier-price">from $550<span class="per">/acre</span></span></div>
+      <div class="tier-desc">We mow down brush, tall grass, and saplings so your property is walkable and maintained. Material stays on site.</div>
+    </div>
+    <div class="tier tier-feature">
+      <div class="tier-head"><span class="tier-name">Mulch In Place</span><span class="tier-price">from $900<span class="per">/acre</span></span></div>
+      <div class="tier-desc">We grind brush and small trees into fine mulch left on-site as natural ground cover — cleaner finish, helps hold back regrowth, nothing to haul.</div>
+    </div>
+    <div class="tier">
+      <div class="tier-head"><span class="tier-name">Clear &amp; Haul</span><span class="tier-price">from $2,500<span class="per">/acre</span></span></div>
+      <div class="tier-desc">We clear it, load it, and haul it completely off — bare, clean, ready-to-use ground. The most thorough option.</div>
+    </div>
+
+    <div style="text-align:center;color:var(--gray);font-size:12px;margin:14px 0 0;">2026 introductory pricing. Minimum job price applies.</div>
+
+    <div class="disclaim" style="margin-top:18px;">
+      These are starting-point guidelines — not quotes. We price every job as a whole, not by the hour. Your final price is set by the owner at a free on-site walk, because density, hills, rocky or caliche ground, tree size, and access all change the work involved. Two properties that look the same can price very differently. You'll get one clear number before any work begins — and you approve it first.
+    </div>
+
+    <button class="btn" id="lcb0" onclick="goTo('lc1')">Get My Free Site Walk →</button>
+    <div class="textline">Or <b>text photos to 737-235-1335</b> to get started faster.</div>
+    <button class="back" onclick="goTo('s0')">← Back</button>
+  </div>
 
   <!-- LC STEP 1: acreage -->
   <div class="card hidden" id="lc1">
@@ -384,7 +421,7 @@
   });
 
   function goTo(id){
-    ['s0','c1','c2','c3','m1','lc1','lc2','lc3','lc4','lc5','done'].forEach(s=>document.getElementById(s).classList.add('hidden'));
+    ['s0','c1','c2','c3','m1','lc0','lc1','lc2','lc3','lc4','lc5','done'].forEach(s=>document.getElementById(s).classList.add('hidden'));
     document.getElementById(id).classList.remove('hidden');
     window.scrollTo(0,0);
   }
@@ -393,9 +430,9 @@
   document.getElementById('b0').onclick=()=>{
     if(A.service==='cleanout'){ goTo('c1'); }
     else if(A.service==='clearing'||A.service==='mulching'){
-      // both clearing and mulching → guided land-clearing flow
+      // both clearing and mulching → tier-price screen, then guided flow
       A.pickerLabel=(A.service==='mulching')?'Forestry Mulching':'Land & Brush Clearing';
-      goTo('lc1');
+      goTo('lc0');
     }
     else {
       // gravel, grading, other → site-walk form
