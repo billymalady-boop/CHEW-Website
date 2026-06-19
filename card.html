@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Billy Malady — CHEW Earthworks | Digital Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --yellow:#F5C400; --red:#CC2222; --black:#1a1a1a; --bg:#0d0d0d; --white:#FFFFFF; --gray:#888;
+    --font-display:'Barlow Condensed',sans-serif; --font-body:'Barlow',sans-serif;
+    --card:#161616; --line:#2a2a2a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--white);font-family:var(--font-body);
+    min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;
+    width:100%;max-width:380px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.5);}
+  .head{background:linear-gradient(135deg,#1a1a1a,#0d0d0d);padding:28px 24px 22px;text-align:center;border-bottom:3px solid var(--yellow);}
+  .brand{font-family:var(--font-display);font-weight:900;font-size:48px;color:var(--red);letter-spacing:3px;line-height:1;}
+  .tagline{font-family:var(--font-display);font-size:10px;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-top:4px;}
+  .name{font-family:var(--font-display);font-weight:800;font-size:26px;color:var(--white);letter-spacing:1px;margin-top:14px;}
+  .title{font-family:var(--font-display);font-size:13px;color:var(--yellow);letter-spacing:2px;text-transform:uppercase;}
+  .services{font-family:var(--font-body);font-size:12px;color:#bbb;line-height:1.5;margin-top:12px;padding:0 6px;}
+  .qr-wrap{padding:22px 24px 14px;text-align:center;}
+  .qr-label{font-family:var(--font-display);font-size:13px;color:var(--gray);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;}
+  .qr-box{display:inline-block;background:#fff;padding:14px;border-radius:12px;line-height:0;}
+  .qr-box img{display:block;width:220px;height:220px;}
+  .scan-hint{font-size:12px;color:var(--gray);margin-top:12px;line-height:1.5;padding:0 10px;}
+  .actions{padding:8px 20px 24px;display:grid;gap:10px;}
+  .btn{display:flex;align-items:center;gap:12px;background:#101010;border:1px solid var(--line);
+    border-radius:10px;padding:13px 16px;color:var(--white);font-size:15px;font-weight:500;
+    text-decoration:none;transition:.15s;}
+  .btn:hover{border-color:var(--red);}
+  .btn .ic{font-size:18px;width:22px;text-align:center;}
+  .btn .lbl{flex:1;}
+  .btn .lbl b{display:block;font-family:var(--font-display);font-size:11px;color:var(--gray);letter-spacing:1.5px;text-transform:uppercase;font-weight:700;}
+  .btn-save{background:var(--yellow);color:var(--black);border-color:var(--yellow);justify-content:center;font-family:var(--font-display);font-weight:800;font-size:17px;letter-spacing:1px;text-transform:uppercase;}
+  .btn-save:hover{background:#d9ad00;border-color:#d9ad00;}
+  .foot{text-align:center;padding:0 20px 22px;font-size:11px;color:#555;letter-spacing:1px;}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="brand">CHEW</div>
+      <div class="tagline">Clearing · Hauling · Earthwork · Waste</div>
+      <div class="name">Billy Malady</div>
+      <div class="title">Owner</div>
+      <div class="services">Junk Removal · Land &amp; Brush Clearing · Forestry Mulching · Gravel Driveways · Grading · Hauling</div>
+    </div>
+    <div class="qr-wrap">
+      <div class="qr-label">Scan to Save My Contact</div>
+      <div class="qr-box"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2wAAANsCAIAAACoDrwGAAAcpElEQVR4nO3dS44jy3ZEUaWQs3jzH9obB9VRS4BKbirHuXaca7ULyWB8WBvRsZ/P5/MfAACQ+M9/+gAAANhHRAIAEBORAADERCQAADERCQBATEQCABATkQAAxEQkAAAxEQkAQExEAgAQE5EAAMREJAAAMREJAEBMRAIAEBORAADERCQAADERCQBATEQCABATkQAAxEQkAAAxEQkAQExEAgAQE5EAAMR+b/2hf/3rX7f+1Dr//ve//89/c3J+Tv7OiclrsfG7tx3zicnvdWLyHPo7f2/jMU/a+L3afudPtB2zbvl73kQCABATkQAAxEQkAAAxEQkAQExEAgAQE5EAAMREJAAAMREJAEBMRAIAEBORAADERCQAALFr29kn2rZHT2zc1ty4c7pxR/iWtuO59VmTf2fjNnTbczr5d169prdMbtyfuHUO287ziY3HPPl/tzeRAADERCQAADERCQBATEQCABATkQAAxEQkAAAxEQkAQExEAgAQE5EAAMREJAAAMREJAEBsdDv7xOTmY9se8eReatve7i1t333jdu3GzeLJ635L2/m55eR7tX33V+/5Nht3zE+82i0nvIkEACAmIgEAiIlIAABiIhIAgJiIBAAgJiIBAIiJSAAAYiISAICYiAQAICYiAQCIiUgAAGJ129mvatvtbduBvbW3e6Jte3Sjtu31tj3ijVvMJ9qu14m2394Tbffhq88Xf8+bSAAAYiISAICYiAQAICYiAQCIiUgAAGIiEgCAmIgEACAmIgEAiIlIAABiIhIAgJiIBAAgZjt7yMad3G8+5lufdevvTG6Ln2g7z21b3pOfNXme2zavJ4+57d649d3btsVtXu/iTSQAADERCQBATEQCABATkQAAxEQkAAAxEQkAQExEAgAQE5EAAMREJAAAMREJAEBMRAIAEKvbzv7m3cyNG68b97VveXWD+5a2TfCNu89t333ye7X9nVs2bqbfsvGYT7QdzyRvIgEAiIlIAABiIhIAgJiIBAAgJiIBAIiJSAAAYiISAICYiAQAICYiAQCIiUgAAGIiEgCA2Oh29uQ+aZuNW7H+zszfadO2hz55njfuvLddr1e1/W5883MxeTwbf8MneRMJAEBMRAIAEBORAADERCQAADERCQBATEQCABATkQAA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QExEAgAQE5EAAMREJAAAMREJAEBMRAIAEBORAADERCQAADERCQBAbHQ7+8TGHc8TG7e8X90xf/WzTrRt+27c6T6x8R5r+11t+91oY9P5733zb+8t3kQCABATkQAAxEQkAAAxEQkAQExEAgAQE5EAAMREJAAAMREJAEBMRAIAEBORAADERCQAALHfW39ocoNy46Zq297lN+9i39L2vTZ+Vpu27972u7Hxuk9uFm/8HTtx67tPnudb57Dt/5Q23kQCABATkQAAxEQkAAAxEQkAQExEAgAQE5EAAMREJAAAMREJAEBMRAIAEBORAADERCQAALGfz+cz9mGTe5eTn3WibTN049+5ZfIeO7FxL/VE2z12y8b96EmvPl9t1/3Ve37j7+E3nx9vIgEAiIlIAABiIhIAgJiIBAAgJiIBAIiJSAAAYiISAICYiAQAICYiAQCIiUgAAGIiEgCA2LXt7G/et924zdq2v/nNO8ttG+Vt5/nV52Lj97If/Wdtz86JyY3yyXN4YuP/gycmv5c3kQAAxEQkAAAxEQkAQExEAgAQE5EAAMREJAAAMREJAEBMRAIAEBORAADERCQAADERCQBA7Np29i1tu6In2naEJ7dHb9m47dt2ntuO55aNe8Tf7NV7rE3blnfb7vOr5+eE7WwAAKqJSAAAYiISAICYiAQAICYiAQCIiUgAAGIiEgCAmIgEACAmIgEAiIlIAABiIhIAgNi17Wy7mT1/55a27zW5B9p2P9/Stmvctpn+zRvBkzb+jrXZeE3bjvnExnvVdjYAANVEJAAAMREJAEBMRAIAEBORAADERCQAADERCQBATEQCABATkQAAxEQkAAAxEQkAQOzadvYtbbuQG7XtdG/cCG777ifanp22PetX78O283PLxs3its+65dX7+Zufi1vfy5tIAABiIhIAgJiIBAAgJiIBAIiJSAAAYiISAICYiAQAICYiAQCIiUgAAGIiEgCAmIgEACB2bTv7m3dFJ716fjbunLad52/+7uzSdq+2Hc8Jv5n8byavqTeRAADERCQAADERCQBATEQCABATkQAAxEQkAAAxEQkAQExEAgAQE5EAAMREJAAAMREJAEDs2nb2ickdT5uhf7Zxg/ubr9ctbc/X5HneeP+07SO3/a6emLxXJ8/zLRuv14m2533yHpu8V72JBAAgJiIBAIiJSAAAYiISAICY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iUgAAGIiEgCAmIgEACAmIgEAiIlIAABiIhIAgNjP5/O58oc27ni+utF54tVz+OrWcJu2a9r2nE6avH/8zs981qvnsO17TXp1X9ubSAAAYiISAICYiAQAICYiAQCIiUgAAGIiEgCAmIgEACAmIgEAiIlIAABiIhIAgJiIBAAgdm07mz9r2zC99Vm3tG0xb9S2u9p2z796P5/YeM+33Ye3vPrstF2vV5/3tmfZm0gAAGIiEgCAmIgEACAmIgEAiIlIAABiIhIAgJiIBAAgJiIBAIiJSAAAYiISAICYiAQAIPZ76w+17ZNOurVluXFXdON1b9ulndS2Md12Dl89P23bvpPneeNvXds+8om2Z/nExue9jTeRAADERCQAADERCQBATEQCABATkQAAxEQkAAAxEQkAQExEAgAQE5EAAMREJAAAMREJAEDs2nb2iY27kG27vZM2bsW2ncO2HeFbO8snx7Pxed+4kzu5Wbxxz3rjNZ28XpO/URvPzy0bn9MT3kQCABATkQAAxEQkAAAxEQkAQExEAgAQE5EAAMREJAAAMREJAEBMRAIAEBORAADERCQAALHR7ewTG/eaJz/r1obp5N85sfG6b9xVf3XP+tYm+KSNz3LbMU9q+//i1fv5lrbzc0vbc+FNJAAAMREJAEBMRAIAEBORAADERCQAADERCQBATEQCABATkQAAxEQkAAAxEQkAQExEAgAQq9vOftWtXdG2PeuNG68nNn73tk3wyfPz6jZ9m7Yt7xMbr8Xk78bG7fVXf3s3/rZ4EwkAQExEAgAQE5EAAMREJAAAMREJAEBMRAIAEBORAADERCQAADERCQBATEQCABATkQAAxGxnF5ncxNy4Pdq2a9y2+3yi7bu/avKaTv4m3Po7r94/bb/ht7T91k0eT9u92rbz7k0kAAAxEQkAQExEAgAQE5EAAMREJAAAMREJAEBMRAIAEBORAADERCQAADERCQBATEQCABCr285u24W8xUbneyavadt27S1t+7+T274bv/utvzP5WW0mf+e/eWP6xMZjPjH57HgTCQBATEQCABATkQAAxEQkAAAxEQkAQExEAgAQE5EAAMREJAAAMREJAEBMRAIAEBORAADERrezX92pPDG5XXticltz8u+0nee2jeBvfgZvabtek/vRbffzibbfhFsmf6Nu/Z22e+PWMW/cpr/Fm0gAAGIiEgCAmIgEACAmIgEAiIlIAABiIhIAgJiIBAAgJiIBAIiJSAAAYiISAICYiAQAIPbz+Xz+6WMAAGAZbyIBAIiJSAAAYiISAICYiAQAICYiAQCIiUgAAGIiEgCAmIgEACAmIgEAiIlIAABiIhIAgJiIBAAgJiIBAIiJSAAAYiISAICYiAQAICYiAQCIiUgAAGIiEgCAmIgEACAmIgEAiIlIAABiIhIAgNh/AVKRs0przFITAAAAAElFTkSuQmCC" alt="Scan to save Billy Malady contact" /></div>
+      <div class="scan-hint">Point your phone camera at the code — it'll offer to save Billy to your contacts.</div>
+    </div>
+    <div class="actions">
+      <a class="btn btn-save" id="saveBtn" href="#" download="Billy-Malady-CHEW.vcf">⬇ Save Contact</a>
+      <a class="btn" href="tel:+17372351335"><span class="ic">📞</span><span class="lbl"><b>Call / Text</b>737-235-1335</span></a>
+      <a class="btn" href="mailto:chew.earthworks@gmail.com"><span class="ic">✉️</span><span class="lbl"><b>Email</b>chew.earthworks@gmail.com</span></a>
+      <a class="btn" href="https://callchew.com" target="_blank"><span class="ic">🌐</span><span class="lbl"><b>Website</b>callchew.com</span></a>
+    </div>
+    <div class="foot">CHEW EARTHWORKS · COPPERAS COVE, TX</div>
+  </div>
+<script>
+  var vcard = [
+    "BEGIN:VCARD","VERSION:3.0","N:Malady;Billy;;;","FN:Billy Malady",
+    "ORG:CHEW Earthworks","TITLE:Owner",
+    "TEL;TYPE=CELL:+17372351335","EMAIL:chew.earthworks@gmail.com",
+    "URL:https://callchew.com",
+    "NOTE:Junk removal, land clearing, brush clearing, forestry mulching, gravel driveways, grading, hauling, debris removal — Copperas Cove TX",
+    "END:VCARD"
+  ].join("\n");
+  var blob = new Blob([vcard], {type: "text/vcard"});
+  document.getElementById("saveBtn").href = URL.createObjectURL(blob);
+</script>
+</body>
+</html>
