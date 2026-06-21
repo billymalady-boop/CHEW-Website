@@ -836,6 +836,46 @@
       height: auto;
       object-fit: contain;
     }
+    .gallery-item.phone {
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 0;
+    }
+    .phone-frame {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 26px;
+      padding: 9px;
+      max-width: 230px;
+      width: 70%;
+      box-shadow: 0 8px 28px rgba(0,0,0,.55);
+      position: relative;
+    }
+    .phone-screen {
+      position: relative;
+      background: #000;
+      border-radius: 18px;
+      overflow: hidden;
+      aspect-ratio: 9 / 16;
+    }
+    .phone-screen iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .phone-notch {
+      position: absolute;
+      top: 7px; left: 50%;
+      transform: translateX(-50%);
+      width: 42px; height: 5px;
+      background: #000;
+      border: 1px solid #222;
+      border-radius: 3px;
+      z-index: 3;
+    }
     .gallery-item img {
       width: 100%;
       height: 100%;
@@ -1607,6 +1647,19 @@
           </iframe>
         </div>
         <div class="gallery-label">Before &amp; After</div>
+      </div>
+      <div class="gallery-item phone">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <iframe
+              src="https://www.youtube.com/embed/-LI-HclPYIQ?rel=0&showinfo=0"
+              title="CHEW On the Job"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
       </div>
     </div>
   </div>
