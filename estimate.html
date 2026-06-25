@@ -125,6 +125,7 @@
       <div class="opt" data-v="cleanout"><span>🗑️ Debris Removal / Cleanout</span><span class="chk">✓</span></div>
       <div class="opt" data-v="clearing"><span>🌲 Land &amp; Brush Clearing</span><span class="chk">✓</span></div>
       <div class="opt" data-v="mulching"><span>🪓 Forestry Mulching</span><span class="chk">✓</span></div>
+      <div class="opt" data-v="trail"><span>🥾 Trail Cutting</span><span class="chk">✓</span></div>
       <div class="opt" data-v="gravel"><span>🪨 Gravel Driveway — New or Regrade</span><span class="chk">✓</span></div>
       <div class="opt" data-v="grading"><span>📐 Site Prep &amp; Grading</span><span class="chk">✓</span></div>
       <div class="opt" data-v="other"><span>➕ Something Else</span><span class="chk">✓</span></div>
@@ -234,7 +235,7 @@
       <div class="tier-desc">We mow down brush, tall grass, and saplings so your property is walkable and maintained. Material stays on site.</div>
     </div>
     <div class="tier tier-feature">
-      <div class="tier-head"><span class="tier-name">Mulch In Place</span><span class="tier-price">from $900<span class="per">/acre</span></span></div>
+      <div class="tier-head"><span class="tier-name">Mulch In Place</span><span class="tier-price">from $1,300<span class="per">/acre</span></span></div>
       <div class="tier-desc">We grind brush and small trees into fine mulch left on-site as natural ground cover — cleaner finish, helps hold back regrowth, nothing to haul.</div>
     </div>
     <div class="tier">
@@ -442,7 +443,7 @@
     }
     else {
       // gravel, grading, other → site-walk form
-      const labels={gravel:'Gravel Driveway',grading:'Site Prep & Grading',other:'Other'};
+      const labels={gravel:'Gravel Driveway',grading:'Site Prep & Grading',trail:'Trail Cutting',other:'Other'};
       document.getElementById('walkService').value=labels[A.service]||'General';
       goTo('m1');
     }
