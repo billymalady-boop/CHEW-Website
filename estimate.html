@@ -1,452 +1,1876 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Get an Estimate — CHEW | Central Texas Site Services</title>
-<meta name="description" content="Get a fast estimate or request a free site visit for land clearing, forestry mulching, gravel driveways, and grading. Serving Coryell, Bell &amp; Lampasas counties. Call 737-235-1335." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
-<style>
-  :root{
-    --yellow:#F5C400; --red:#CC2222; --black:#1a1a1a; --bg:#0d0d0d; --white:#FFFFFF; --gray:#888;
-    --font-display:'Barlow Condensed',sans-serif; --font-body:'Barlow',sans-serif;
-    --card:#161616; --line:#2a2a2a;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHEW — Land Clearing & Site Services | Forestry Mulching, Brush Cutting, Gravel Driveways</title>
+  <meta name="description" content="Forestry mulching, land &amp; brush clearing, stump grinding, trail cutting, gravel driveways and grading. Serving Coryell, Bell, and Lampasas counties. Call 737-235-1335 for a free estimate." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.callchew.com/#business",
+    "name": "CHEW — Land Clearing & Site Services",
+    "image": "https://www.callchew.com/logo.png",
+    "url": "https://www.callchew.com",
+    "telephone": "+1-737-235-1335",
+    "email": "chew.earthworks@gmail.com",
+    "description": "Central Texas land clearing and site services: forestry mulching, land and brush clearing, stump grinding, trail cutting, grading, site prep, and gravel driveway work. Serving Coryell, Bell, and Lampasas counties.",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Copperas Cove",
+      "addressRegion": "TX",
+      "postalCode": "76522",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Coryell County, TX" },
+      { "@type": "AdministrativeArea", "name": "Bell County, TX" },
+      { "@type": "AdministrativeArea", "name": "Lampasas County, TX" },
+      { "@type": "City", "name": "Copperas Cove, TX" },
+      { "@type": "City", "name": "Killeen, TX" },
+      { "@type": "City", "name": "Harker Heights, TX" },
+      { "@type": "City", "name": "Temple, TX" },
+      { "@type": "City", "name": "Belton, TX" },
+      { "@type": "City", "name": "Gatesville, TX" },
+      { "@type": "City", "name": "Lampasas, TX" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "CHEW Site Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Forestry Mulching" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Land & Brush Clearing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stump Grinding" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trail Cutting" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gravel Driveway Repair & Installation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Prep & Grading" } }
+      ]
+    }
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:var(--bg);color:var(--white);font-family:var(--font-body);line-height:1.6;}
-  a{color:inherit;text-decoration:none;}
-  .container{max-width:760px;margin:0 auto;padding:0 20px;}
+  </script>
 
-  /* header */
-  header{border-bottom:1px solid var(--line);background:rgba(13,13,13,.95);position:sticky;top:0;z-index:50;}
-  nav{max-width:1100px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;}
-  .brand{font-family:var(--font-display);font-weight:900;font-size:26px;color:var(--red);letter-spacing:1px;}
-  .brand span{color:var(--gray);font-size:11px;font-weight:600;letter-spacing:2px;display:block;line-height:1;margin-top:-2px;}
-  .nav-back{font-family:var(--font-display);font-weight:700;color:var(--yellow);font-size:15px;letter-spacing:.5px;}
-  .logo-banner{text-align:center;padding:24px 20px 0;}
-  .logo-banner img{max-width:420px;width:100%;height:auto;}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  /* hero */
-  .ehead{text-align:center;padding:46px 20px 10px;}
-  .section-label{font-family:var(--font-display);color:var(--red);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:14px;}
-  h1{font-family:var(--font-display);font-weight:900;font-size:46px;line-height:1.05;margin:8px 0;}
-  h1 span{color:var(--yellow);}
-  .ehead p{color:var(--gray);max-width:520px;margin:0 auto;}
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --yellow: #F5C400;
+      --red:    #CC2222;
+      --black:  #1a1a1a;
+      --bg:     #0d0d0d;
+      --white:  #FFFFFF;
+      --gray:   #888;
+      --light:  #ccc;
+      --border: rgba(245,196,0,0.18);
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body:    'Barlow', sans-serif;
+    }
 
-  /* card */
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px;margin:26px 0 50px;}
-  .qlabel{font-family:var(--font-display);font-size:15px;text-transform:uppercase;letter-spacing:1.5px;color:var(--yellow);margin:22px 0 12px;font-weight:700;}
-  .qlabel:first-child{margin-top:0;}
+    /* ── RESET ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-  .opts{display:grid;gap:11px;}
-  .opts.two{grid-template-columns:1fr 1fr;}
-  .opt{background:#101010;border:2px solid var(--line);border-radius:10px;padding:15px 16px;cursor:pointer;transition:.15s;font-size:16px;display:flex;justify-content:space-between;align-items:center;font-weight:500;}
-  .opt:hover{border-color:#454545;}
-  .opt.sel{border-color:var(--red);background:#241010;}
-  .opt .chk{opacity:0;color:var(--red);font-weight:900;}
-  .opt.sel .chk{opacity:1;}
+    /* ── UTILITY ── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 13px 28px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-primary:hover { background: #ffd633; transform: translateY(-1px); }
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--yellow);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      border: 2px solid var(--yellow);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .btn-outline:hover { background: var(--yellow); color: var(--black); }
 
-  .btn{width:100%;background:var(--red);color:#fff;border:none;border-radius:10px;padding:16px;font-family:var(--font-display);font-size:18px;font-weight:800;letter-spacing:1px;cursor:pointer;margin-top:26px;text-transform:uppercase;transition:.15s;}
-  .btn:hover{background:#a91b1b;}
-  .btn:disabled{background:#2e1a1a;color:#7a5a5a;cursor:not-allowed;}
-  .btn.yellow{background:var(--yellow);color:var(--black);}
-  .btn.yellow:hover{background:#d9ad00;}
+    /* ── NAV ── */
+    #nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--black);
+      border-bottom: 3px solid var(--yellow);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .nav-logo-fallback {
+      display: block;
+    }
+    .nav-logo-fallback .chew-word {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--yellow);
+      letter-spacing: 3px;
+      line-height: 1;
+    }
+    .nav-logo-fallback .chew-sub {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gray);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-links a {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--light);
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--yellow); }
+    .nav-cta { margin-left: 16px; color: var(--black) !important; background: var(--yellow) !important; }
+    .nav-cta:hover { background: #ffd633 !important; color: var(--black) !important; }
+    .nav-logo-img { height: 56px; width: auto; }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: 0.2s;
+    }
+    .mobile-menu {
+      display: none;
+      background: var(--black);
+      padding: 16px 24px 24px;
+      border-top: 1px solid var(--border);
+    }
+    .mobile-menu a {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--light);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu .btn-primary { margin-top: 16px; width: 100%; text-align: center; }
 
-  .hidden{display:none;}
-  .back{background:none;border:none;color:var(--gray);font-size:14px;cursor:pointer;margin-top:18px;text-decoration:underline;font-family:var(--font-body);}
+    /* ── HERO ── */
+    #hero {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 79px,
+          rgba(245,196,0,0.03) 80px
+        );
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 72px 24px 80px;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-content {
+      flex: 1.2;
+      min-width: 0;
+    }
+    .hero-logo-panel {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+    }
+    .hero-logo-panel img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      filter: drop-shadow(0 8px 40px rgba(245,196,0,0.25));
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      margin-bottom: 20px;
+    }
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(48px, 7vw, 88px);
+      font-weight: 900;
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      margin-bottom: 24px;
+    }
+    .hero-headline em {
+      font-style: normal;
+      color: var(--yellow);
+      display: block;
+    }
+    .hero-headline .hl-yellow {
+      color: var(--yellow);
+    }
+    .hero-tagline {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 900;
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      text-align: center;
+      margin-bottom: 18px;
+      color: #fff;
+    }
+    .hero-tagline em {
+      font-style: normal;
+      color: var(--yellow);
+      display: block;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: var(--light);
+      max-width: 560px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .hero-phone {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--yellow);
+      letter-spacing: 1px;
+    }
+    .hero-phone span { color: var(--gray); font-size: 13px; display: block; font-weight: 400; letter-spacing: 0; margin-bottom: 2px; }
 
-  .dots{display:flex;justify-content:center;gap:8px;margin-bottom:22px;}
-  .dot{width:9px;height:9px;border-radius:50%;background:var(--line);}
-  .dot.on{background:var(--red);}
+    /* ── TRUST BAR ── */
+    #trust {
+      background: var(--yellow);
+      padding: 0;
+    }
+    .trust-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 28px 16px 0;
+      margin-right: 28px;
+      border-right: 1px solid rgba(26,26,26,0.2);
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--black);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .trust-item:last-child { border-right: none; margin-right: 0; }
+    .trust-icon { font-size: 18px; }
 
-  /* range result */
-  .range{font-family:var(--font-display);font-size:52px;font-weight:900;color:var(--yellow);text-align:center;margin:4px 0;line-height:1;}
-  .rangesub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:6px;}
-  .disclaim{background:#101010;border-left:3px solid var(--yellow);padding:14px 16px;border-radius:6px;font-size:14px;color:#bbb;margin:20px 0;}
+    /* ── SERVICES ── */
+    #services {
+      padding: 80px 0;
+    }
+    .section-label {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 50px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin-bottom: 48px;
+    }
+    .section-title span { color: var(--yellow); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .service-card {
+      background: var(--black);
+      padding: 32px 28px;
+      border-top: 3px solid transparent;
+      transition: border-color 0.2s, background 0.2s;
+      cursor: default;
+    }
+    .service-card:hover {
+      border-top-color: var(--yellow);
+      background: #222;
+    }
+    .service-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .service-name {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .service-desc {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.65;
+    }
 
-  /* form fields */
-  .form-group{margin-bottom:14px;}
-  label{display:block;font-family:var(--font-display);font-weight:600;letter-spacing:.5px;margin-bottom:6px;font-size:15px;}
-  input,select,textarea{width:100%;background:#101010;border:1px solid var(--line);border-radius:8px;padding:13px;color:#fff;font-size:15px;font-family:var(--font-body);}
-  input::placeholder,textarea::placeholder{color:#666;}
-  textarea{min-height:90px;resize:vertical;}
-  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+    /* ── WHY CHEW ── */
+    #why {
+      background: var(--black);
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .why-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .why-left {}
+    .why-statement {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--white);
+      margin-bottom: 24px;
+      padding-left: 20px;
+      border-left: 4px solid var(--yellow);
+    }
+    .why-body {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .why-right {}
+    .why-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .pillar {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .pillar:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
+    .pillar-num {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--yellow);
+      line-height: 1;
+      min-width: 36px;
+    }
+    .pillar-text {}
+    .pillar-title {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .pillar-desc {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
 
-  .textline{text-align:center;font-size:15px;color:var(--gray);margin-top:16px;}
-  .textline b{color:var(--yellow);}
-  .form-note{text-align:center;color:var(--gray);font-size:13px;margin-top:10px;}
-  #form-success{display:none;text-align:center;color:var(--yellow);font-weight:600;padding:30px 10px;font-size:18px;}
+    /* ── SERVICE AREA ── */
+    #area {
+      padding: 80px 0;
+    }
+    .area-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .county-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 40px;
+    }
+    .county-card {
+      background: var(--black);
+      padding: 28px 24px;
+      border-left: 4px solid var(--red);
+    }
+    .county-name {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .county-towns {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.8;
+    }
+    .area-note {
+      margin-top: 24px;
+      font-size: 14px;
+      color: var(--gray);
+    }
+    .area-note strong { color: var(--yellow); }
 
-  .site-walk-intro{background:#101010;border-radius:10px;padding:16px;margin-bottom:20px;border:1px solid var(--line);}
-  .site-walk-intro b{color:var(--yellow);}
-  .tier{background:#101010;border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:12px;}
-  .tier-feature{border-color:var(--yellow);background:#1a1606;}
-  .tier-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:6px;}
-  .tier-name{font-family:var(--font-display);font-weight:800;font-size:20px;letter-spacing:.5px;}
-  .tier-price{font-family:var(--font-display);font-weight:900;font-size:22px;color:var(--yellow);white-space:nowrap;}
-  .tier-price .per{font-size:13px;color:var(--gray);font-weight:600;}
-  .tier-desc{color:#bbb;font-size:14px;line-height:1.5;}
+    /* ── QUOTE FORM ── */
+    #quote {
+      background: var(--black);
+      padding: 80px 0;
+      border-top: 3px solid var(--yellow);
+    }
+    .quote-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .quote-left {}
+    .quote-left .section-title { margin-bottom: 16px; }
+    .quote-desc {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .quote-details {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .quote-detail-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--light);
+    }
+    .qd-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(245,196,0,0.1);
+      border: 1px solid var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .quote-form-wrap {}
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 15px;
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color 0.15s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--yellow);
+    }
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+    }
+    .form-group select option { background: var(--black); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-submit { width: 100%; text-align: center; margin-top: 8px; }
+    .form-note {
+      font-size: 12px;
+      color: var(--gray);
+      margin-top: 10px;
+      text-align: center;
+    }
+    #form-success {
+      display: none;
+      background: rgba(245,196,0,0.1);
+      border: 1px solid var(--yellow);
+      padding: 20px;
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--yellow);
+      margin-top: 16px;
+    }
 
-  @media(max-width:600px){
-    h1{font-size:36px;}
-    .opts.two{grid-template-columns:1fr;}
-    .form-row{grid-template-columns:1fr;}
-    .range{font-size:42px;}
-  }
-</style>
+
+
+    /* ── VIDEO ── */
+    #video {
+      padding: 80px 0;
+      background: var(--black);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .video-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+    .video-inner .section-label { text-align: center; }
+    .video-inner .section-title { text-align: center; margin-bottom: 32px; }
+    .video-embed {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      border: 3px solid var(--yellow);
+    }
+    .video-embed iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+
+    /* ── CLEAR & KEEP ── */
+    #clearkeep {
+      padding: 80px 0;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+    }
+    .ck-intro {
+      max-width: 680px;
+      margin-bottom: 48px;
+    }
+    .ck-intro .why-statement {
+      margin-bottom: 16px;
+    }
+    .ck-intro p {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.8;
+    }
+    .ck-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      margin-bottom: 32px;
+    }
+    .ck-card {
+      background: var(--black);
+      padding: 32px 28px;
+      border-top: 4px solid transparent;
+      position: relative;
+    }
+    .ck-card.featured {
+      border-top-color: var(--yellow);
+    }
+    .ck-card.basic { border-top-color: #555; }
+    .ck-card.premium { border-top-color: var(--red); }
+    .ck-badge {
+      position: absolute;
+      top: -1px;
+      right: 20px;
+      background: var(--yellow);
+      color: var(--black);
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+    }
+    .ck-tier {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+    .ck-name {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .ck-visits {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--yellow);
+      line-height: 1;
+    }
+    .ck-visits span {
+      font-size: 16px;
+      color: var(--gray);
+      font-weight: 400;
+      display: block;
+      margin-top: 4px;
+    }
+    .ck-discount {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--white);
+      margin: 20px 0 16px;
+    }
+    .ck-discount em {
+      font-style: normal;
+      color: var(--yellow);
+    }
+    .ck-features {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+    .ck-features li {
+      font-size: 14px;
+      color: var(--gray);
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ck-features li::before {
+      content: '✓';
+      color: var(--yellow);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .ck-note {
+      background: rgba(245,196,0,0.06);
+      border: 1px solid var(--border);
+      padding: 20px 24px;
+      margin-top: 8px;
+    }
+    .ck-note p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    .ck-note strong { color: var(--white); }
+    @media (max-width: 768px) {
+      .ck-grid { grid-template-columns: 1fr; }
+    }
+
+
+    /* ── AD GALLERY ── */
+    .ad-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .ad-grid img {
+      width: 100%;
+      display: block;
+      border: 1px solid var(--border);
+      transition: transform 0.2s;
+    }
+    .ad-grid img:hover { transform: scale(1.02); }
+    .ad-section-label {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-top: 56px;
+      margin-bottom: 4px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+    @media (max-width: 768px) {
+      .ad-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── GALLERY ── */
+    #gallery {
+      padding: 80px 0;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      margin-top: 40px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      background: var(--black);
+    }
+    .gallery-item.wide {
+      grid-column: span 2;
+      aspect-ratio: 2 / 1;
+    }
+    .gallery-item.pano {
+      grid-column: 1 / -1;
+      aspect-ratio: auto;
+    }
+    .gallery-item.pano img {
+      height: auto;
+      object-fit: contain;
+    }
+    .gallery-item.phone {
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 0;
+    }
+    .phone-frame {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 26px;
+      padding: 9px;
+      max-width: 230px;
+      width: 70%;
+      box-shadow: 0 8px 28px rgba(0,0,0,.55);
+      position: relative;
+    }
+    .phone-screen {
+      position: relative;
+      background: #000;
+      border-radius: 18px;
+      overflow: hidden;
+      aspect-ratio: 9 / 16;
+    }
+    .phone-screen iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .phone-notch {
+      position: absolute;
+      top: 7px; left: 50%;
+      transform: translateX(-50%);
+      width: 42px; height: 5px;
+      background: #000;
+      border: 1px solid #222;
+      border-radius: 3px;
+      z-index: 3;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.03); }
+    .gallery-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.85));
+      padding: 24px 16px 12px;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--yellow);
+    }
+
+    /* ── PAYMENT ── */
+    .payment-bar {
+      background: var(--black);
+      border-top: 1px solid var(--border);
+      padding: 20px 24px;
+    }
+    .payment-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .payment-label {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+    .payment-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .pay-badge {
+      background: var(--bg);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 6px 14px;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.5px;
+    }
+    .pay-badge.cash { color: #2db34a; border-color: #2db34a; }
+    .pay-badge.venmo { color: #3396cd; border-color: #3396cd; }
+    .pay-badge.check { color: var(--gray); }
+
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-item.wide { grid-column: span 2; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item.wide { grid-column: span 1; aspect-ratio: 1/1; }
+    }
+
+
+    /* ── ABOUT ── */
+    #about {
+      padding: 80px 0;
+      background: var(--black);
+      border-top: 1px solid var(--border);
+    }
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .about-story {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.9;
+    }
+    .about-story p { margin-bottom: 18px; }
+    .about-story p:last-child { margin-bottom: 0; }
+    .about-right {}
+    .about-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 28px 24px;
+      margin-bottom: 3px;
+    }
+    .about-card-title {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--yellow);
+      margin-bottom: 10px;
+    }
+    .about-card-text {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.75;
+    }
+    @media (max-width: 768px) {
+      .about-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ── FAQ ── */
+    #faq {
+      padding: 80px 0;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+    }
+    .faq-grid {
+      margin-top: 40px;
+    }
+    .faq-category {
+      margin-bottom: 48px;
+    }
+    .faq-items {
+      columns: 2;
+      column-gap: 48px;
+    }
+    .faq-cat-title {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item {
+      break-inside: avoid-column;
+      margin-bottom: 24px;
+    }
+    .faq-q {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .faq-a {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.75;
+    }
+    @media (max-width: 768px) {
+      .faq-items { columns: 1; }
+    }
+
+    /* ── FOOTER ── */
+    #footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 48px 0 24px;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+    .footer-brand .chew-word {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--yellow);
+      letter-spacing: 4px;
+      line-height: 1;
+    }
+    .footer-brand .chew-full {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gray);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+      margin-bottom: 16px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li {
+      font-size: 14px;
+      color: var(--gray);
+      padding: 4px 0;
+      line-height: 1.5;
+    }
+    .footer-col ul li a { color: var(--gray); transition: color 0.15s; }
+    .footer-col ul li a:hover { color: var(--yellow); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .footer-bottom p {
+      font-size: 12px;
+      color: var(--gray);
+    }
+    .footer-lic {
+      font-size: 12px;
+      color: var(--gray);
+      text-align: right;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-logo-panel { display: none; }
+    }
+    @media (max-width: 768px) {
+      .video-inner div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu.open { display: block; }
+      .hero-inner { padding: 48px 24px 56px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .why-inner { grid-template-columns: 1fr; gap: 40px; }
+      .county-list { grid-template-columns: 1fr; }
+      .quote-inner { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-lic { text-align: center; }
+      .trust-inner { gap: 0; }
+      .trust-item { padding: 12px 16px 12px 0; margin-right: 16px; font-size: 11px; }
+    }
+    @media (max-width: 480px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <nav>
-    <div class="brand">CHEW<span>CENTRAL TEXAS SITE SERVICES</span></div>
-    <a href="https://www.callchew.com/" class="nav-back">Visit CHEW Website →</a>
+<!-- ── NAV ── -->
+<header id="nav">
+  <nav class="nav-inner">
+    <a href="#" class="nav-brand" aria-label="CHEW Central Texas Site Services">
+      <div class="nav-logo-fallback" style="display:block">
+        <div class="chew-word">CHEW</div>
+        <div class="chew-sub">Central Texas Site Services</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#clearkeep">Care Plan</a>
+      <a href="#why">Why CHEW</a>
+      <a href="#about">Our Story</a>
+      <a href="#faq">FAQ</a>
+      <a href="#video">Commercials/Ads</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#area">Service Area</a>
+      <a href="estimate.html" class="btn-primary nav-cta">Free Estimate</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#clearkeep" onclick="closeMobile()">Care Plan</a>
+    <a href="#why" onclick="closeMobile()">Why CHEW</a>
+    <a href="#about" onclick="closeMobile()">Our Story</a>
+    <a href="#faq" onclick="closeMobile()">FAQ</a>
+    <a href="#video" onclick="closeMobile()">Commercials/Ads</a>
+    <a href="#gallery" onclick="closeMobile()">Gallery</a>
+    <a href="#area" onclick="closeMobile()">Service Area</a>
+    <a href="estimate.html" class="btn-primary" onclick="closeMobile()">Free Estimate</a>
+  </div>
 </header>
 
-<div class="logo-banner">
-  <img src="chew_logo.png" alt="CHEW — Land Clearing &amp; Site Services · Coryell County, Texas · 737-235-1335" />
-</div>
-
-<div class="ehead">
-  <div class="section-label">Get Started</div>
-  <h1>Get an <span>Estimate</span></h1>
-  <p>Tell us what you need. Smaller jobs get a fast ballpark range — bigger machine jobs get a free site walk so your price is exact.</p>
-</div>
-
-<div class="container">
-
-  <!-- STEP 0: SERVICE PICKER -->
-  <div class="card" id="s0">
-    <div class="qlabel">What do you need?</div>
-    <div class="opts" data-q="service">
-      <div class="opt" data-v="clearing"><span>🌲 Land &amp; Brush Clearing</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="mulching"><span>🪓 Forestry Mulching</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="trail"><span>🥾 Trail Cutting</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="gravel"><span>🪨 Gravel Driveway — New or Regrade</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="grading"><span>📐 Site Prep &amp; Grading</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="other"><span>➕ Something Else</span><span class="chk">✓</span></div>
-    </div>
-    <button class="btn" id="b0" disabled>Continue</button>
-  </div>
-
-  <!-- ============ TRAIL CUTTING PATH ============ -->
-  <div class="card hidden" id="tr1">
-    <div class="section-label" style="text-align:center;">Trail Cutting</div>
-    <h2 style="text-align:center;font-family:var(--font-display);font-weight:900;font-size:26px;margin:6px 0 4px;">How long is your trail?</h2>
-    <p class="sub" style="text-align:center;">We cut trails <b style="color:var(--yellow)">10 feet wide</b> — wide enough for a truck, UTV, or equipment to pass. Enter the length and we'll show you a starting range.</p>
-
-    <div class="form-group" style="margin-top:18px;">
-      <label>Trail length (in feet)</label>
-      <input type="number" id="trailLen" min="0" step="10" placeholder="e.g. 600" />
-    </div>
-
-    <div id="trailResult" style="display:none;">
-      <div class="section-label" style="text-align:center;margin-top:10px;">Your Trail — Starting Range</div>
-      <div class="range" id="trailRange">—</div>
-      <div class="rangesub" id="trailSub"></div>
-      <div class="disclaim">
-        ⚠ This is a starting range, not a final quote. Trail pricing depends on terrain, vegetation, tree size, and access — so your exact number is set by the owner at a free on-site walk. You approve it before any work begins. A minimum applies for standalone trail jobs.
-      </div>
-      <form id="trail-form" action="https://formspree.io/f/xkoepjqn" method="POST">
-        <div class="qlabel">Want your exact price? Drop your info:</div>
-        <div class="form-row">
-          <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="John Smith" required /></div>
-          <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="(254) 555-0100" required /></div>
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Coryell · Bell · Lampasas Counties</div>
+      <h1 class="hero-headline">
+        Take Your<br>
+        <span class="hl-yellow">Land</span> Back.
+      </h1>
+      <p class="hero-sub" style="font-size:15px; margin-bottom:8px;">CHEW — Central Texas land clearing &amp; site services for homeowners, landowners, and ranchers.</p>
+      <ul style="list-style:none; margin-bottom:20px; padding:0;">
+        <li style="color:var(--light); font-size:14px; padding:4px 0;"><span style="color:var(--yellow); margin-right:8px;">✦</span>Forestry mulching &amp; land clearing</li>
+        <li style="color:var(--light); font-size:14px; padding:4px 0;"><span style="color:var(--yellow); margin-right:8px;">✦</span>Brush &amp; field cutting</li>
+        <li style="color:var(--light); font-size:14px; padding:4px 0;"><span style="color:var(--yellow); margin-right:8px;">✦</span>Stump grinding</li>
+        <li style="color:var(--light); font-size:14px; padding:4px 0;"><span style="color:var(--yellow); margin-right:8px;">✦</span>Trail cutting</li>
+        <li style="color:var(--light); font-size:14px; padding:4px 0;"><span style="color:var(--yellow); margin-right:8px;">✦</span>Gravel driveway install &amp; repair</li>
+        <li style="color:var(--light); font-size:14px; padding:4px 0;"><span style="color:var(--yellow); margin-right:8px;">✦</span>Site prep &amp; grading</li>
+      </ul>
+      <p style="font-size:14px; color:var(--yellow); font-weight:600; margin-bottom:24px;">JCB track loader. Right equipment. Right work ethic. You call — we show up.</p>
+      <div class="hero-actions">
+        <a href="estimate.html" class="btn-primary">Request a Free Estimate</a>
+        <div class="hero-phone">
+          <span>Call or Text</span>
+          <a href="tel:7372351335">737-235-1335</a>
         </div>
-        <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="you@example.com" required /></div>
-        <div class="form-group"><label>Property Address (city is fine)</label><input type="text" name="address" placeholder="Copperas Cove" required /></div>
-        <input type="hidden" name="service" value="Trail Cutting" />
-        <input type="hidden" name="estimate_range" id="trailHiddenRange" />
-        <input type="hidden" name="details" id="trailHiddenDetails" />
-        <input type="hidden" name="_subject" value="New Trail Cutting Request — CHEW" />
-        <input type="text" name="_gotcha" style="display:none" />
-        <button type="submit" class="btn yellow">Book My Free Site Walk</button>
-      </form>
-      <div class="textline">Faster? <b>Text photos to 737-235-1335</b> — we'll get you scoped same day.</div>
-    </div>
-
-    <button class="back" onclick="goTo('s0')">← Start over</button>
-  </div>
-
-  <!-- ============ MACHINE-WORK PATH (site walk) ============ -->
-  <div class="card hidden" id="m1">
-    <div class="site-walk-intro" id="walkIntro">
-      <b>This one needs a look.</b> Clearing, mulching, gravel and grading prices depend on access, terrain, and what's in the ground — things we can't price blind without risking your wallet. Tell us about it and we'll set up a <b>free site walk</b> and give you an exact written quote. No pressure, no obligation.
-    </div>
-    <form id="walk-form" action="https://formspree.io/f/xkoepjqn" method="POST">
-      <div class="form-row">
-        <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="John Smith" required /></div>
-        <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="(254) 555-0100" required /></div>
       </div>
-      <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="you@example.com" required /></div>
-      <div class="form-group"><label>Property Address (city is fine)</label><input type="text" name="address" placeholder="Copperas Cove" required /></div>
-      <div class="form-group">
-        <label>Tell us about your project</label>
-        <textarea name="description" placeholder="Size of the area, what needs clearing/grading/hauling, access, timeline, etc." required></textarea>
+    </div>
+    <div class="hero-logo-panel">
+        <div class="hero-tagline">
+          One Problem.<br>
+          <em>One Call.</em>
+          One Solution.
+        </div>
+        <div class="video-embed" style="width:100%;">
+          <iframe
+            src="https://www.youtube.com/embed/F08FgLtPwSo?rel=0&showinfo=0"
+            title="CHEW Our Story"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
-      <input type="hidden" name="service" id="walkService" value="" />
-      <input type="hidden" name="_subject" value="New Site-Walk Request — CHEW" />
-      <input type="text" name="_gotcha" style="display:none" />
-      <button type="submit" class="btn">Request My Free Site Walk</button>
-      <p class="form-note">We typically respond within 24 hours.</p>
-    </form>
-    <div class="textline">Or <b>text photos to 737-235-1335</b> to get started faster.</div>
-    <button class="back" onclick="goTo('s0')">← Start over</button>
   </div>
+</section>
 
-  <!-- ============ LAND CLEARING / MULCHING GUIDED PATH ============ -->
-
-  <!-- LC STEP 0: tier pricing (anchor screen, shown before the guided flow) -->
-  <div class="card hidden" id="lc0">
-    <div class="section-label" style="text-align:center;">Three Ways We Clear Land</div>
-    <h2 style="text-align:center;font-family:var(--font-display);font-weight:900;font-size:26px;margin:6px 0 4px;">Pick the finish you want</h2>
-    <p class="sub" style="text-align:center;">Most jobs price around these starting points. We set your exact number at a free site walk.</p>
-
-    <div class="tier">
-      <div class="tier-head"><span class="tier-name">Brush Cut</span><span class="tier-price">from $550<span class="per">/acre</span></span></div>
-      <div class="tier-desc">We mow down brush, tall grass, and saplings so your property is walkable and maintained. Material stays on site.</div>
-    </div>
-    <div class="tier tier-feature">
-      <div class="tier-head"><span class="tier-name">Mulch In Place</span><span class="tier-price">from $2,500<span class="per">/acre</span></span></div>
-      <div class="tier-desc">We grind brush and small trees into fine mulch left on-site as natural ground cover — cleaner finish, helps hold back regrowth, nothing to haul.</div>
-    </div>
-    <div class="tier">
-      <div class="tier-head"><span class="tier-name">Clear &amp; Haul</span><span class="tier-price">from $4,000<span class="per">/acre</span></span></div>
-      <div class="tier-desc">We clear it, load it, and haul it completely off — bare, clean, ready-to-use ground. The most thorough option.</div>
-    </div>
-
-    <div style="text-align:center;color:var(--gray);font-size:12px;margin:14px 0 0;">Minimum job price applies.</div>
-
-    <div class="disclaim" style="margin-top:18px;">
-      These are starting-point guidelines — not quotes. We price every job as a whole, not by the hour. Your final price is set by the owner at a free on-site walk, because density, hills, rocky or caliche ground, tree size, and access all change the work involved. Two properties that look the same can price very differently. You'll get one clear number before any work begins — and you approve it first.
-    </div>
-
-    <button class="btn" id="lcb0" onclick="goTo('lc1')">Get My Free Site Walk →</button>
-    <div class="textline">Or <b>text photos to 737-235-1335</b> to get started faster.</div>
-    <button class="back" onclick="goTo('s0')">← Back</button>
+<!-- ── TRUST BAR ── -->
+<div id="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-icon">✔</span> JCB Track Loader</div>
+    <div class="trust-item"><span class="trust-icon">✔</span> Licensed &amp; Insured</div>
+    <div class="trust-item"><span class="trust-icon">✔</span> Free Estimates</div>
+    <div class="trust-item"><span class="trust-icon">✔</span> No Job Too Remote</div>
+    <div class="trust-item"><span class="trust-icon">✔</span> Same-Week Scheduling</div>
   </div>
-
-  <!-- LC STEP 1: acreage -->
-  <div class="card hidden" id="lc1">
-    <div class="dots"><div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
-    <div class="qlabel">Roughly how much land needs clearing?</div>
-    <div class="opts" data-q="acre">
-      <div class="opt" data-v="Under 1/2 acre"><span>Under ½ acre</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="1/2 to 2 acres"><span>½ – 2 acres</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="2 to 5 acres"><span>2 – 5 acres</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="5 to 10 acres"><span>5 – 10 acres</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="10+ acres"><span>10+ acres</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="Not sure on acreage"><span>Not sure — you tell me</span><span class="chk">✓</span></div>
-    </div>
-    <button class="btn" id="lcb1" disabled>Next</button>
-    <button class="back" onclick="goTo('s0')">← Back</button>
-  </div>
-
-  <!-- LC STEP 2: density -->
-  <div class="card hidden" id="lc2">
-    <div class="dots"><div class="dot"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
-    <div class="qlabel">How thick is it?</div>
-    <div class="opts" data-q="density">
-      <div class="opt" data-v="Light (scattered brush, walkable)"><span>Light — scattered brush, you can walk through it</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="Moderate (mixed brush and some cedar)"><span>Moderate — mixed brush and some cedar</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="Heavy (thick cedar/mesquite)"><span>Heavy — thick cedar/mesquite, can't walk through</span><span class="chk">✓</span></div>
-    </div>
-    <button class="btn" id="lcb2" disabled>Next</button>
-    <button class="back" onclick="goTo('lc1')">← Back</button>
-  </div>
-
-  <!-- LC STEP 3: tree size -->
-  <div class="card hidden" id="lc3">
-    <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>
-    <div class="qlabel">Any larger trees mixed in?</div>
-    <div class="opts" data-q="trees">
-      <div class="opt" data-v="Mostly brush and small stuff"><span>Mostly brush &amp; small stuff</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="Some trees up to ~8 inches"><span>Some trees up to about 8 inches</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="Bigger trees mixed in"><span>Bigger trees mixed in</span><span class="chk">✓</span></div>
-    </div>
-    <button class="btn" id="lcb3" disabled>Next</button>
-    <button class="back" onclick="goTo('lc2')">← Back</button>
-  </div>
-
-  <!-- LC STEP 4: ground (multi-select) -->
-  <div class="card hidden" id="lc4">
-    <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot on"></div><div class="dot"></div></div>
-    <div class="qlabel">What's the ground like?</div>
-    <div style="color:var(--gray);font-size:13px;margin:-6px 0 12px;">Tap all that apply.</div>
-    <div class="opts" data-q="ground">
-      <div class="opt" data-v="hilly"><span>Sloped or hilly</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="rocky"><span>Rocky or caliche</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="wet"><span>Wet or soft spots</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="tight access"><span>Tight access for a truck &amp; trailer</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="flat and open"><span>None of these — flat &amp; open</span><span class="chk">✓</span></div>
-    </div>
-    <button class="btn" id="lcb4">Next</button>
-    <button class="back" onclick="goTo('lc3')">← Back</button>
-  </div>
-
-  <!-- LC STEP 5: material + contact form -->
-  <div class="card hidden" id="lc5">
-    <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot on"></div></div>
-    <div class="qlabel">What should happen to the material?</div>
-    <div class="opts" data-q="material">
-      <div class="opt" data-v="Mulch in place"><span>Mulch it in place — leave the chips as ground cover</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="Haul it off"><span>Haul it off — clear it away completely</span><span class="chk">✓</span></div>
-      <div class="opt" data-v="Advise at visit"><span>Not sure — advise me at the visit</span><span class="chk">✓</span></div>
-    </div>
-    <div class="disclaim" style="margin-top:22px;">We'll confirm everything on a <b style="color:var(--yellow)">free site visit</b> and hand you a firm written price before any work begins. No phone quotes, no surprises.</div>
-    <form id="clearing-form" action="https://formspree.io/f/xkoepjqn" method="POST">
-      <div class="form-row">
-        <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="John Smith" required /></div>
-        <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="(254) 555-0100" required /></div>
-      </div>
-      <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="you@example.com" required /></div>
-      <div class="form-group"><label>Property Address (city is fine)</label><input type="text" name="address" placeholder="Copperas Cove" required /></div>
-      <input type="hidden" name="service" id="lcService" value="" />
-      <input type="hidden" name="project_scope" id="lcScope" value="" />
-      <input type="hidden" name="_subject" value="New Land-Clearing Site Visit Request — CHEW" />
-      <input type="text" name="_gotcha" style="display:none" />
-      <button type="submit" class="btn yellow" id="lcSubmit" disabled>Book My Free Site Visit</button>
-      <p class="form-note">We typically respond within 24 hours.</p>
-    </form>
-    <button class="back" onclick="goTo('lc4')">← Back</button>
-  </div>
-
-  <!-- shared success -->
-  <div class="card hidden" id="done">
-    <div id="form-success" style="display:block;">✔ Request received! We'll be in touch within 24 hours.<br><br>Need it faster? Text photos to <b style="color:var(--yellow)">737-235-1335</b>.</div>
-    <button class="back" onclick="location.href='https://www.callchew.com/'" style="display:block;margin:0 auto;">Visit CHEW Website →</button>
-  </div>
-
 </div>
 
+<!-- ── SERVICES ── -->
+<section id="services">
+  <div class="container">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Site Services That <span>Get Done</span></h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <span class="service-icon">
+          <svg width="48" height="48" viewBox="0 0 100 90" fill="none" stroke="#F5C400" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26 74 L26 50"/>
+            <path d="M26 50 C13 50 10 33 21 28 C18 16 34 12 38 22 C47 16 56 26 49 36 C58 41 53 55 41 52"/>
+            <line x1="10" y1="74" x2="92" y2="74"/>
+            <ellipse cx="52" cy="68" rx="7" ry="3"/>
+            <line x1="45" y1="68" x2="45" y2="62"/><line x1="59" y1="68" x2="59" y2="62"/>
+            <path d="M45 62 Q52 58 59 62"/>
+            <ellipse cx="72" cy="71" rx="6" ry="2.5"/>
+            <line x1="66" y1="71" x2="66" y2="66"/><line x1="78" y1="71" x2="78" y2="66"/>
+            <path d="M66 66 Q72 63 78 66"/>
+            <ellipse cx="86" cy="68" rx="5" ry="2.5"/>
+            <line x1="81" y1="68" x2="81" y2="63"/><line x1="91" y1="68" x2="91" y2="63"/>
+            <path d="M81 63 Q86 60 91 63"/>
+          </svg>
+        </span>
+        <div class="service-name">Reclaim &amp; Run&trade;</div>
+        <div style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Forestry Mulching / Land Clearing</div>
+        <p class="service-desc">Cedar, mesquite, and heavy brush don't quit. Neither do we. We mulch and clear small cedars, saplings, and heavy brush — the kind that hides snakes, rodents, and everything else you don't want near your property. Forestry mulching grinds it into fine cover that helps slow regrowth, or we clear it right down to usable ground. You get your land back: open, walkable, and ready to fence, build, graze, or just enjoy. Per-acre pricing is a guide — every job is quoted as a whole after we see it. Minimum job price applies.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">
+          <svg width="48" height="48" viewBox="0 0 100 90" fill="none" stroke="#F5C400" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <line x1="12" y1="64" x2="88" y2="64"/>
+            <path d="M20 64 L20 50 M26 64 C26 54 22 52 24 48 M32 64 L32 50"/>
+            <path d="M44 64 L44 50 M50 64 C50 54 46 52 48 48 M56 64 L56 50"/>
+            <path d="M68 64 L68 50 M74 64 C74 54 70 52 72 48 M80 64 L80 50"/>
+            <line x1="30" y1="72" x2="38" y2="72"/>
+            <line x1="54" y1="74" x2="62" y2="74"/>
+            <line x1="16" y1="74" x2="22" y2="74"/>
+          </svg>
+        </span>
+        <div class="service-name">Pasture Ready&trade;</div>
+        <div style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Brush / Field Cutting</div>
+        <p class="service-desc">Overgrown pasture and fence lines don't just look bad — they hide snakes, choke out grass, and shrink the land you can actually use. We knock down brush, tall grass, saplings, and overgrowth fast, opening your field back up so it's walkable, grazeable, and maintained. Faster and more affordable than full mulching when you just need it cut down and cleared out. Per-acre pricing is a guide — every job is quoted as a whole after we see it. Minimum job price applies.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">
+          <svg width="48" height="48" viewBox="0 0 100 90" fill="none" stroke="#F5C400" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <line x1="14" y1="66" x2="86" y2="66"/>
+            <path d="M36 66 L36 44 M64 66 L64 44"/>
+            <ellipse cx="50" cy="44" rx="14" ry="5"/>
+            <ellipse cx="50" cy="44" rx="7" ry="2.5"/>
+            <path d="M68 40 L78 36 M70 46 L80 46 M68 52 L77 56" stroke-width="2.5"/>
+            <path d="M22 38 L30 40 M20 46 L29 46" stroke-width="2.5"/>
+          </svg>
+        </span>
+        <div class="service-name">Gone for Good&trade;</div>
+        <div style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Stump Grinding</div>
+        <p class="service-desc">A leftover stump is more than an eyesore — it's a tripping hazard, a mower-killer, and a home for termites and rot. We grind stumps down below ground level so the problem is gone for good, not just cut flush. Whether it's left over from a clearing job or an old tree that came down years ago, we'll grind it out and leave you clean ground you can mow, plant, or build over. Quoted by stump size and count.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">
+          <svg width="48" height="48" viewBox="0 0 100 90" fill="none" stroke="#F5C400" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <path d="M38 78 C38 64 30 58 34 46 C37 36 30 30 36 20"/>
+            <path d="M62 78 C62 64 70 58 66 46 C63 36 70 30 64 20"/>
+            <line x1="50" y1="72" x2="50" y2="66"/>
+            <line x1="50" y1="56" x2="50" y2="50"/>
+            <line x1="50" y1="40" x2="50" y2="34"/>
+            <path d="M20 60 L20 50 M14 54 L20 46 L26 54"/>
+            <path d="M80 60 L80 50 M74 54 L80 46 L86 54"/>
+          </svg>
+        </span>
+        <div class="service-name">Trail Blazed&trade;</div>
+        <div style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Trail Cutting</div>
+        <p class="service-desc">Can't get to the back of your own property? We cut clean, usable trails through cedar, brush, and overgrowth — for hunting access, ranch roads, ATV paths, or just getting where you need to go. Ten feet wide, cleared and passable, opening up land that's been locked behind the brush line for years. Priced by trail length and difficulty.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">
+          <svg width="48" height="48" viewBox="0 0 80 90" fill="none" stroke="#F5C400" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10,85 L30,10 L50,10 L70,85 Z"/>
+            <line x1="40" y1="28" x2="40" y2="42" stroke-dasharray="6,6"/>
+            <line x1="40" y1="52" x2="40" y2="66" stroke-dasharray="6,6"/>
+          </svg>
+        </span>
+        <div class="service-name">The Road Ready Package&trade;</div>
+        <div style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Gravel Driveway Repair &amp; Install</div>
+        <p class="service-desc">A washed-out driveway beats up your vehicles and tells everyone your property isn't maintained. We bring in base prep, grading, and fresh gravel — then crown it and compact it so the water runs off instead of cutting ruts. You get a driveway that holds up, sheds rain, and makes the whole property look cared for. Quoted by the job.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">
+          <svg width="48" height="48" viewBox="0 0 80 100" fill="none" stroke="#F5C400" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="10" x2="40" y2="72"/>
+            <path d="M26,55 Q18,75 26,88 Q40,98 54,88 Q62,75 54,55 Z"/>
+            <line x1="30" y1="10" x2="50" y2="10"/>
+            <line x1="0" y1="98" x2="80" y2="98"/>
+            <path d="M0,98 Q20,85 40,90 Q60,95 80,98"/>
+          </svg>
+        </span>
+        <div class="service-name">The Grade &amp; Go Package&trade;</div>
+        <div style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Site Prep &amp; Grading</div>
+        <p class="service-desc">Got a building pad, outbuilding site, or pasture that needs to be shaped and ready? We move dirt, level ground, and get your site prepared right the first time. You get level, compacted, build-ready ground that drains the way it should — so whatever comes next sits on a solid foundation. Quoted by scope after site visit.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY CHEW ── -->
+<section id="why">
+  <div class="why-inner">
+    <div class="why-left">
+      <div class="section-label">Why CHEW</div>
+      <h2 class="section-title">Built on <span>Dependability</span></h2>
+      <p class="why-statement">Too many homeowners have been burned by unreliable contractors. CHEW was built to change that.</p>
+      <p class="why-body">Central Texas property owners shouldn't have to chase down contractors, wonder if they're showing up, or get surprise invoices. We built CHEW around one principle: if we say we're coming, we're coming — and the work gets done right the first time.</p>
+      <a href="tel:7372351335" class="btn-outline">Call 737-235-1335</a>
+    </div>
+    <div class="why-right">
+      <div class="why-pillars">
+        <div class="pillar">
+          <div class="pillar-num">01</div>
+          <div class="pillar-text">
+            <div class="pillar-title">We Show Up</div>
+            <p class="pillar-desc">You'll get a confirmation before the job and a call if anything changes. No ghosting, no excuses.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">02</div>
+          <div class="pillar-text">
+            <div class="pillar-title">Written Quotes</div>
+            <p class="pillar-desc">You get a detailed written estimate before we start — scope, price, and what's included. No surprises on invoice day.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">03</div>
+          <div class="pillar-text">
+            <div class="pillar-title">Right Equipment</div>
+            <p class="pillar-desc">A JCB compact track loader purpose-built for Central Texas terrain. Minimal ground disturbance, maximum capability.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">04</div>
+          <div class="pillar-text">
+            <div class="pillar-title">Licensed &amp; Insured</div>
+            <p class="pillar-desc">Fully insured with general liability and commercial auto. We protect your property and ours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICE AREA ── -->
+<section id="area">
+  <div class="area-inner">
+    <div class="section-label">Where We Work</div>
+    <h2 class="section-title">60-Mile Radius from <span>Coryell County</span></h2>
+    <div class="county-list">
+      <div class="county-card">
+        <div class="county-name">Coryell County</div>
+        <div class="county-towns">Gatesville · Copperas Cove · Evant · Oglesby · Jonesboro · McGregor area</div>
+      </div>
+      <div class="county-card">
+        <div class="county-name">Bell County</div>
+        <div class="county-towns">Killeen · Temple · Belton · Harker Heights · Nolanville · Salado</div>
+      </div>
+      <div class="county-card">
+        <div class="county-name">Lampasas County</div>
+        <div class="county-towns">Lampasas · Lometa · Kempner · Adamsville · surrounding ranch land</div>
+      </div>
+    </div>
+    <p class="area-note">Not sure if you're in our range? <strong>Call or text 737-235-1335</strong> — we'll tell you straight.</p>
+  </div>
+</section>
+
+<!-- ── VIDEO ── -->
+<section id="video">
+  <div class="video-inner" style="max-width:1100px;">
+    <div class="section-label">Commercials</div>
+    <h2 class="section-title">CHEW: <span>Solving Problems</span></h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+      <div>
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/c5k2iW3LKNI?rel=0&showinfo=0"
+            title="CHEW Commercial 2"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p style="text-align:center; margin-top:12px;">
+          <a href="https://youtu.be/c5k2iW3LKNI" target="_blank" class="btn-outline" style="font-size:13px;">&#9654; Watch on YouTube</a>
+        </p>
+      </div>
+      <div>
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/LFdOBiLNFUQ?rel=0&showinfo=0"
+            title="CHEW Mega Mower"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p style="text-align:center; margin-top:12px;">
+          <a href="https://youtu.be/LFdOBiLNFUQ" target="_blank" class="btn-outline" style="font-size:13px;">&#9654; Watch on YouTube</a>
+        </p>
+      </div>
+      <div>
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/9N3TVY2JKOw?rel=0&showinfo=0"
+            title="CHEW Commercial 6"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p style="text-align:center; margin-top:12px;">
+          <a href="https://youtu.be/9N3TVY2JKOw" target="_blank" class="btn-outline" style="font-size:13px;">&#9654; Watch on YouTube</a>
+        </p>
+      </div>
+    </div>
+    <div class="ad-section-label">Print &amp; Social Ads</div>
+    <div class="ad-grid">
+      <img src="Gravel_Drive_Ad.jpg" alt="The Road Ready Package - Gravel Driveway Ad" loading="lazy" />
+      <img src="land_clear_ad.jpg" alt="The Reclaim Package - Land Clearing Ad" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ── CLEAR & KEEP ── -->
+<section id="clearkeep">
+  <div class="container">
+    <div class="section-label">Subscription Service</div>
+    <h2 class="section-title">CHEW Clear &amp; Keep <span>Plan</span></h2>
+    <div class="ck-intro">
+      <p class="why-statement">Cedar doesn't stop growing in the off-season. Neither do we.</p>
+      <p>The CHEW Clear &amp; Keep Plan puts your property on a scheduled maintenance program. We contact you before every visit, your rate is locked for 12 months, and you never have to hunt down a contractor again. Up to <strong style="color:var(--yellow)">25% off</strong> standard rates.</p>
+    </div>
+    <div class="ck-grid">
+
+      <div class="ck-card basic">
+        <div class="ck-tier">Basic</div>
+        <div class="ck-name">Clear &amp; Keep Basic</div>
+        <div class="ck-visits">2<span>visits per year</span></div>
+        <div class="ck-discount"><em>5% off</em> every visit</div>
+        <ul class="ck-features">
+          <li>Scheduled service — we call ahead</li>
+          <li>Rate locked 12 months</li>
+          <li>Priority scheduling</li>
+          <li>10% cash discount stackable</li>
+          <li>5% pay-in-full discount stackable</li>
+        </ul>
+        <a href="estimate.html" class="btn-outline" style="width:100%; text-align:center; display:block;">Get Started</a>
+      </div>
+
+      <div class="ck-card featured">
+        <div class="ck-badge">Most Popular</div>
+        <div class="ck-tier">Standard</div>
+        <div class="ck-name">Clear &amp; Keep Standard</div>
+        <div class="ck-visits">4<span>visits per year</span></div>
+        <div class="ck-discount"><em>10% off</em> every visit</div>
+        <ul class="ck-features">
+          <li>Scheduled service — we call ahead</li>
+          <li>Rate locked 12 months</li>
+          <li>Priority scheduling</li>
+          <li>10% cash discount stackable</li>
+          <li>5% pay-in-full discount stackable</li>
+        </ul>
+        <a href="estimate.html" class="btn-primary" style="width:100%; text-align:center; display:block;">Get Started</a>
+      </div>
+
+      <div class="ck-card premium">
+        <div class="ck-tier">Premium</div>
+        <div class="ck-name">Clear &amp; Keep Premium</div>
+        <div class="ck-visits">6<span>visits per year</span></div>
+        <div class="ck-discount"><em>15% off</em> every visit</div>
+        <ul class="ck-features">
+          <li>Scheduled service — we call ahead</li>
+          <li>Rate locked 12 months</li>
+          <li>Priority scheduling</li>
+          <li>10% cash discount stackable</li>
+          <li>5% pay-in-full discount stackable</li>
+        </ul>
+        <a href="estimate.html" class="btn-outline" style="width:100%; text-align:center; display:block;">Get Started</a>
+      </div>
+
+    </div>
+    <div class="ck-note">
+      <p><strong>How it works:</strong> Select your plan, sign a simple service agreement, and CHEW handles the rest. We reach out before each scheduled visit to confirm scope and timing. Maximum combined discount is 25%. Pricing based on scope of work determined at site visit — plan discount applies to all recurring visits.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── GALLERY ── -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-label">Our Work</div>
+    <h2 class="section-title">Results That <span>Speak for Themselves</span></h2>
+    <div class="gallery-grid">
+      <div class="gallery-item pano">
+        <img src="barn_clearing.jpg" alt="Barn and lot overgrowth cleared, before and after" loading="lazy" />
+        <div class="gallery-label">Barn &amp; Lot Clearing</div>
+      </div>
+      <div class="gallery-item wide">
+        <img src="Gravel_Drive.jpg" alt="Gravel driveway before and after" loading="lazy" />
+        <div class="gallery-label">Gravel Driveway Restoration</div>
+      </div>
+      <div class="gallery-item">
+        <img src="brush_clearing.jpg" alt="Brush clearing before and after" loading="lazy" />
+        <div class="gallery-label">Brush Clearing</div>
+      </div>
+      <div class="gallery-item">
+        <img src="fence_line_clearing.jpg" alt="Fence line clearing before and after" loading="lazy" />
+        <div class="gallery-label">Fence Line Clearing</div>
+      </div>
+      <div class="gallery-item wide">
+        <img src="Land_clear_1.jpg" alt="Land clearing before and after" loading="lazy" />
+        <div class="gallery-label">Land Clearing</div>
+      </div>
+      <div class="gallery-item">
+        <img src="Brush_removal.jpg" alt="Brush removal before and after" loading="lazy" />
+        <div class="gallery-label">Brush Removal</div>
+      </div>
+      <div class="gallery-item">
+        <img src="brush_hogging.jpg" alt="Brush hogging before and after" loading="lazy" />
+        <div class="gallery-label">Brush Hogging</div>
+      </div>
+      <div class="gallery-item wide" style="position:relative; background:#000;">
+        <div class="video-embed" style="position:absolute; inset:0; padding-bottom:0; height:100%;">
+          <iframe
+            src="https://www.youtube.com/embed/YWt457iWN2U?rel=0&showinfo=0"
+            title="CHEW Field Clearing"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;">
+          </iframe>
+        </div>
+        <div class="gallery-label">One Call</div>
+      </div>
+      <div class="gallery-item wide" style="position:relative; background:#000;">
+        <div class="video-embed" style="position:absolute; inset:0; padding-bottom:0; height:100%;">
+          <iframe
+            src="https://www.youtube.com/embed/gFiSTO7ufAE?rel=0&showinfo=0"
+            title="CHEW Before and After Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;">
+          </iframe>
+        </div>
+        <div class="gallery-label">Before &amp; After</div>
+      </div>
+      <div class="gallery-item phone">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <iframe
+              src="https://www.youtube.com/embed/yrf8-vdWXaw?rel=0&showinfo=0"
+              title="CHEW Driveway Restore"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <div class="gallery-label">Driveway Restore</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PAYMENT BAR ── -->
+<div class="payment-bar">
+  <div class="payment-bar-inner">
+    <span class="payment-label">We Accept</span>
+    <div class="payment-badges">
+      <span class="pay-badge cash">💵 Cash <span style="font-size:11px; opacity:0.8;">(ask about cash discount)</span></span>
+      <span class="pay-badge check" style="color:#cfcfcf; border-color:#cfcfcf;">🧾 Check</span>
+      <span class="pay-badge" style="color:#2563eb; border-color:#2563eb;">💳 Credit Card</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-left">
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">How CHEW <span>Got Started</span></h2>
+      <div class="about-story">
+        <p>You know the feeling. You look out across your own property and can't even walk it anymore. Cedar and brush crept in a little at a time, and now it's a wall — choking out the grass, swallowing fence lines, hiding snakes and whatever else you'd rather not think about. Land you're paying taxes on every year, and you can't graze it, build on it, hunt it, or even get to the back of it.</p>
+        <p>I know that feeling because it was my place. I'm a Central Texas landowner. I watched good acreage go from open to unusable faster than you'd believe — cedar doesn't ask permission, and it doesn't quit. I let it slide too long, same as anybody. And the longer it sat, the bigger the job got.</p>
+        <p>Here's what that taught me: <b>land is like anything else you own. Ignore it long enough and it costs you more than it ever should have.</b></p>
+        <p>So I quit waiting on somebody else. I bought a skid steer, ran the mulcher, and took my place back — turned a tangled mess back into open, usable ground. Then a friend asked for help with their place. Then a neighbor. Turns out I love this work — there's nothing like watching a property go from a brush pile to land you'd be proud to stand on. When I retired, CHEW wasn't a question. It was the obvious next move.</p>
+        <p>But there was a second reason, and it's the one that really lit the fire.</p>
+        <p>I've hired a lot of contractors over the years. A few were great. Most were a headache. Late, if they showed at all. A few hours of work stretched into weeks. The job dragged, the price climbed, and more than once I was left with a half-finished mess after they'd cashed the check. I got sick of it. You probably have too.</p>
+        <p>I built CHEW to be the opposite of all that. I show up when I said I would. I clear it, mulch it, and leave the ground the way I'd want my own to look. I price the whole job, not the hour, so you're never watching the clock and wondering what it's going to cost you. And when something's not right — because nobody's flawless — I own it and I fix it on my dime, not yours.</p>
+        <p>That's the whole thing. Right equipment, right work ethic, and a man who treats your land like he treats his own.</p>
+        <p><b>One problem. One call. One solution. That's CHEW.</b></p>
+      </div>
+    </div>
+    <div class="about-right">
+      <div style="margin-bottom:3px;">
+        <img src="owner_1.jpg" alt="CHEW owner with JCB track loader and branded trailer" style="width:100%; display:block;" />
+      </div>
+      <div class="about-card">
+        <div class="about-card-title">Why Choose CHEW?</div>
+        <div class="about-card-text">Because we show up. That sounds simple until you've called three contractors who never called back, or watched someone take a deposit and disappear. I'm a Central Texas landowner, one of you, and I built CHEW because I got tired of the same bad experiences you've had. Right equipment, right work ethic, and a crew that's there when we said we'd be. We commit, we show, we do.</div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-title">What Makes CHEW Different?</div>
+        <div class="about-card-text">One call, one crew, one machine. Whether you need land cleared, brush mulched, a stump ground out, a trail cut, or a driveway fixed, we handle it start to finish. No surprises on the invoice. Just the work done right and the property left clean.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq">
+  <div class="container">
+    <div class="section-label">Got Questions</div>
+    <h2 class="section-title">We've Got <span>Answers</span></h2>
+    <div class="faq-grid">
+
+      <div class="faq-category">
+        <div class="faq-cat-title">General</div>
+        <div class="faq-items">
+        <div class="faq-item">
+          <div class="faq-q">What areas do you service?</div>
+          <div class="faq-a">We serve Coryell, Bell, and Lampasas counties and surrounding communities within a 60-mile radius of Coryell County. Not sure if you're in range? Call or text 737-235-1335 and we'll tell you straight.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Are you insured?</div>
+          <div class="faq-a">Yes. We carry liability insurance for your protection and peace of mind.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How quickly can you start?</div>
+          <div class="faq-a">Most projects can be scheduled within a few days depending on workload and weather.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you offer free estimates?</div>
+          <div class="faq-a">Yes. Free, no-obligation estimates on every job. Final quote is provided after site visit.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I get a quote?</div>
+          <div class="faq-a">Call, text, email, or use the form on this page. Send photos of the project and in many cases we can provide a preliminary estimate before visiting the site.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What forms of payment do you accept?</div>
+          <div class="faq-a">Cash, check, and credit and debit cards. Ask about our cash discount.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you charge by the hour or by the job?</div>
+          <div class="faq-a">Most projects are quoted as a fixed price so you know the cost upfront. No surprises.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Are there hidden fees?</div>
+          <div class="faq-a">No. We discuss all expected costs before work begins.</div>
+        </div>
+        </div>
+      </div>
+
+      <div class="faq-category">
+        <div class="faq-cat-title">Services</div>
+        <div class="faq-items">
+        <div class="faq-item">
+          <div class="faq-q">What's the difference between brush clearing and forestry mulching?</div>
+          <div class="faq-a">Brush clearing knocks down and clears brush, saplings, and overgrowth — it's faster and more affordable. Forestry mulching fully grinds vegetation into fine mulch left on-site as ground cover, which gives a cleaner finish and helps slow regrowth. We'll recommend the right option based on your goals and the density of what's out there.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you clear brush and small trees?</div>
+          <div class="faq-a">Yes. We clear small cedars, saplings, heavy brush, and overgrowth. Large tree removal is outside our current scope and we'll tell you upfront.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What size trees can you clear?</div>
+          <div class="faq-a">We handle brush, saplings, and small to mid-size trees efficiently. Larger mature trees are outside our current scope, and we'll always tell you upfront during the site visit if something falls outside what we handle.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Will the brush grow back after clearing?</div>
+          <div class="faq-a">Cedar and brush are aggressive growers in Central Texas, so some regrowth is natural over time — no clearing method eliminates root systems completely. Forestry mulching tends to slow regrowth more than brush cutting alone. For properties that need ongoing upkeep, ask about our Clear &amp; Keep maintenance plan.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you mow overgrown fields and pastures?</div>
+          <div class="faq-a">Yes. We have a mega mower capable of reclaiming overgrown fields, pastures, and heavily vegetated areas.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you grind stumps after a clearing job?</div>
+          <div class="faq-a">Normally, our forestry mulcher grinds vegetation down to ground level or even below as part of the clearing process. But if terrain conditions don't allow the mulcher to get a stump flush, we have a dedicated stump grinder to finish the job right. We also offer stump grinding as a standalone service — if your property already has old fallen trees or leftover stumps from before, we can come out and grind those down on their own, no full clearing job required.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you cut a trail through dense brush?</div>
+          <div class="faq-a">Yes. We cut and maintain trails for hunting, ranch access, ATV use, and general property navigation — even through heavy cedar and brush. Trails are priced by length and difficulty.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you work on hilly or sloped land?</div>
+          <div class="faq-a">Yes, within reason. Our equipment is built for varied Central Texas terrain, but very steep slopes carry safety limits we won't exceed. We'll evaluate your property's terrain during the site visit and let you know straight if any areas require a different approach.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you fix potholes and washouts?</div>
+          <div class="faq-a">Yes. We repair potholes, washouts, ruts, and related driveway damage. Many driveways can be restored by regrading existing material, saving you money on new gravel.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you deliver and spread material?</div>
+          <div class="faq-a">We arrange material delivery and handle all the spreading and grading with our equipment. You don't have to manage delivery logistics yourself — we take care of it.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you offer volume discounts?</div>
+          <div class="faq-a">Yes. Larger clearing jobs reduce our per-acre setup and mobilization costs, and we pass that savings on. Properties three acres and larger qualify for a reduced per-acre rate — ask for details when you request your estimate.</div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="chew-word">CHEW</div>
+        <div class="chew-full">Land Clearing &amp; Site Services</div>
+        <p>Central Texas land clearing &amp; site services. Serving Coryell, Bell, and Lampasas counties with dependable forestry mulching, brush cutting, stump grinding, gravel driveways, and site prep.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li>Forestry Mulching &amp; Land Clearing</li>
+          <li>Brush &amp; Field Cutting</li>
+          <li>Stump Grinding</li>
+          <li>Trail Cutting</li>
+          <li>Gravel Driveways</li>
+          <li>Site Prep &amp; Grading</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:7372351335">737-235-1335</a></li>
+          <li><a href="mailto:chew.earthworks@gmail.com">chew.earthworks@gmail.com</a></li>
+          <li>Coryell County, TX</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CHEW — Central Texas Site Services. All rights reserved.</p>
+      <p class="footer-lic">Licensed &amp; Insured · Coryell County, TX</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ── JS ── -->
 <script>
-  const A={service:null,full:null,type:null,special:[]};
+  // Mobile menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  function closeMobile() { mobileMenu.classList.remove('open'); }
 
-  function wireQ(q,onPick){
-    document.querySelectorAll('[data-q="'+q+'"] .opt').forEach(opt=>{
-      opt.onclick=()=>{
-        document.querySelectorAll('[data-q="'+q+'"] .opt').forEach(o=>o.classList.remove('sel'));
-        opt.classList.add('sel');
-        A[q]=opt.dataset.v;
-        if(onPick)onPick();
-      };
-    });
-  }
-
-  wireQ('service',()=>{document.getElementById('b0').disabled=!A.service;});
-
-  // --- Land clearing guided flow ---
-  A.ground=[];
-  wireQ('acre',()=>{document.getElementById('lcb1').disabled=!A.acre;});
-  wireQ('density',()=>{document.getElementById('lcb2').disabled=!A.density;});
-  wireQ('trees',()=>{document.getElementById('lcb3').disabled=!A.trees;});
-  wireQ('material',()=>{document.getElementById('lcSubmit').disabled=!A.material; packScope();});
-
-  // ground multi-select (independent toggles; "flat and open" is exclusive)
-  document.querySelectorAll('[data-q="ground"] .opt').forEach(opt=>{
-    opt.onclick=()=>{
-      const v=opt.dataset.v;
-      if(v==='flat and open'){
-        const wasSel=opt.classList.contains('sel');
-        document.querySelectorAll('[data-q="ground"] .opt').forEach(o=>o.classList.remove('sel'));
-        A.ground=[];
-        if(!wasSel){ opt.classList.add('sel'); A.ground=['flat and open']; }
-      } else {
-        const flatOpt=document.querySelector('[data-q="ground"] .opt[data-v="flat and open"]');
-        if(flatOpt){flatOpt.classList.remove('sel');}
-        A.ground=A.ground.filter(x=>x!=='flat and open');
-        if(opt.classList.contains('sel')){
-          opt.classList.remove('sel');
-          A.ground=A.ground.filter(x=>x!==v);
-        } else {
-          opt.classList.add('sel');
-          A.ground.push(v);
-        }
-      }
-    };
-  });
-
-  document.getElementById('lcb1').onclick=()=>goTo('lc2');
-  document.getElementById('lcb2').onclick=()=>goTo('lc3');
-  document.getElementById('lcb3').onclick=()=>goTo('lc4');
-  document.getElementById('lcb4').onclick=()=>goTo('lc5');
-
-  function packScope(){
-    const g=(A.ground&&A.ground.length)?A.ground.join(', '):'standard ground';
-    const scope='Service picked: '+(A.pickerLabel||'Clearing')
-      +' | Acreage: '+(A.acre||'-')
-      +' | Density: '+(A.density||'-')
-      +' | Trees: '+(A.trees||'-')
-      +' | Ground: '+g
-      +' | Material: '+(A.material||'-');
-    document.getElementById('lcScope').value=scope;
-    document.getElementById('lcService').value=(A.pickerLabel||'Land Clearing');
-  }
-
-  function goTo(id){
-    ['s0','m1','tr1','lc0','lc1','lc2','lc3','lc4','lc5','done'].forEach(s=>document.getElementById(s).classList.add('hidden'));
-    document.getElementById(id).classList.remove('hidden');
-    window.scrollTo(0,0);
-  }
-
-  // Service picker → route
-  document.getElementById('b0').onclick=()=>{
-    if(A.service==='clearing'||A.service==='mulching'){
-      // both clearing and mulching → tier-price screen, then guided flow
-      A.pickerLabel=(A.service==='mulching')?'Forestry Mulching':'Land & Brush Clearing';
-      goTo('lc0');
-    }
-    else if(A.service==='trail'){
-      goTo('tr1');
-    }
-    else {
-      // gravel, grading, other → site-walk form
-      const labels={gravel:'Gravel Driveway',grading:'Site Prep & Grading',other:'Other'};
-      document.getElementById('walkService').value=labels[A.service]||'General';
-      goTo('m1');
-    }
-  };
-
-  // --- Trail cutting calculator ---
-  // 10 ft wide, $10–$12 per linear foot, $1,800 standalone minimum.
-  // Lead with the PROJECT TOTAL range (not the scary per-foot number).
-  const TRAIL_LO=10, TRAIL_HI=12, TRAIL_MIN=1800;
-  const trailInput=document.getElementById('trailLen');
-  if(trailInput){
-    trailInput.addEventListener('input',function(){
-      const len=parseFloat(trailInput.value)||0;
-      const result=document.getElementById('trailResult');
-      if(len<=0){ result.style.display='none'; return; }
-      let lo=Math.max(TRAIL_MIN, len*TRAIL_LO);
-      let hi=Math.max(TRAIL_MIN, len*TRAIL_HI);
-      lo=Math.round(lo/50)*50; hi=Math.round(hi/50)*50;
-      const rangeStr=(lo>=hi)?('$'+lo.toLocaleString()):('$'+lo.toLocaleString()+' – $'+hi.toLocaleString());
-      document.getElementById('trailRange').textContent=rangeStr;
-      let sub='Based on a '+len.toLocaleString()+' ft trail cut 10 ft wide.';
-      if(len*TRAIL_LO < TRAIL_MIN){ sub+=' (Standalone minimum applies for a trail this size.)'; }
-      document.getElementById('trailSub').textContent=sub;
-      document.getElementById('trailHiddenRange').value=rangeStr;
-      document.getElementById('trailHiddenDetails').value='Trail length: '+len.toLocaleString()+' ft × 10 ft wide';
-      result.style.display='block';
-    });
-  }
-
-  // Form submits → AJAX to Formspree, show success
-  function ajaxForm(formId){
-    const f=document.getElementById(formId);
-    f.addEventListener('submit',function(e){
+  // Formspree AJAX submission
+  const form = document.getElementById('quote-form');
+  const success = document.getElementById('form-success');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
       e.preventDefault();
-      fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
-        .then(r=>{ goTo('done'); })
-        .catch(()=>{ goTo('done'); });
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          alert('Something went wrong. Please call us directly at 737-235-1335.');
+        }
+      } catch {
+        alert('Something went wrong. Please call us directly at 737-235-1335.');
+      }
     });
   }
-  ajaxForm('walk-form');
-  ajaxForm('clearing-form');
-  ajaxForm('trail-form');
+
+  // Smooth active nav highlighting
+  const sections = document.querySelectorAll('section[id], div[id="trust"]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? '#F5C400' : '';
+    });
+  });
 </script>
+
 </body>
 </html>
