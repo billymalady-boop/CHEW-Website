@@ -1023,13 +1023,15 @@
       border-top: 1px solid var(--border);
     }
     .faq-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
+      columns: 2;
+      column-gap: 48px;
       margin-top: 40px;
     }
-    .faq-category {}
+    .faq-category {
+      break-inside: auto;
+    }
     .faq-cat-title {
+      break-after: avoid-column;
       font-family: var(--font-display);
       font-size: 13px;
       font-weight: 700;
@@ -1041,6 +1043,7 @@
       border-bottom: 1px solid var(--border);
     }
     .faq-item {
+      break-inside: avoid-column;
       margin-bottom: 24px;
     }
     .faq-q {
@@ -1058,7 +1061,7 @@
       line-height: 1.75;
     }
     @media (max-width: 768px) {
-      .faq-grid { grid-template-columns: 1fr; gap: 32px; }
+      .faq-grid { columns: 1; }
     }
 
     /* ── FOOTER ── */
@@ -1242,7 +1245,7 @@
         </div>
         <div class="video-embed" style="width:100%;">
           <iframe
-            src="https://www.youtube.com/embed/Z8W2fx5erjs?rel=0&showinfo=0"
+            src="https://www.youtube.com/embed/F08FgLtPwSo?rel=0&showinfo=0"
             title="CHEW Our Story"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
@@ -1289,7 +1292,7 @@
         </span>
         <div class="service-name">Reclaim &amp; Run&trade;</div>
         <div style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Forestry Mulching / Land Clearing</div>
-        <p class="service-desc">Cedar, mesquite, and heavy brush don't quit growing. Neither do we. We mulch and clear small cedars, saplings, and heavy brush — the kind that hides snakes, rodents, and everything else you don't want near your property. Forestry mulching grinds it into fine cover that helps slow regrowth, or we clear it right down to usable ground. You get your land back: open, walkable, and ready to fence, build, graze, or just enjoy. Quoted by the acre or by the job.</p>
+        <p class="service-desc">Cedar, mesquite, and heavy brush don't quit. Neither do we. We mulch and clear small cedars, saplings, and heavy brush — the kind that hides snakes, rodents, and everything else you don't want near your property. Forestry mulching grinds it into fine cover that helps slow regrowth, or we clear it right down to usable ground. You get your land back: open, walkable, and ready to fence, build, graze, or just enjoy. Per-acre pricing is a guide — every job is quoted as a whole after we see it. Minimum job price applies.</p>
       </div>
 
       <div class="service-card">
@@ -1306,7 +1309,7 @@
         </span>
         <div class="service-name">Pasture Ready&trade;</div>
         <div style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Brush / Field Cutting</div>
-        <p class="service-desc">Overgrown pasture and fence lines don't just look bad — they hide snakes, choke out grass, and shrink the land you can actually use. We knock down brush, tall grass, saplings, and overgrowth fast, opening your field back up so it's walkable, grazeable, and maintained. Faster and more affordable than full mulching when you just need it cut down and cleared out. Quoted by the acre or by the job.</p>
+        <p class="service-desc">Overgrown pasture and fence lines don't just look bad — they hide snakes, choke out grass, and shrink the land you can actually use. We knock down brush, tall grass, saplings, and overgrowth fast, opening your field back up so it's walkable, grazeable, and maintained. Faster and more affordable than full mulching when you just need it cut down and cleared out. Per-acre pricing is a guide — every job is quoted as a whole after we see it. Minimum job price applies.</p>
       </div>
 
       <div class="service-card">
@@ -1644,8 +1647,7 @@
     <span class="payment-label">We Accept</span>
     <div class="payment-badges">
       <span class="pay-badge cash">💵 Cash <span style="font-size:11px; opacity:0.8;">(ask about cash discount)</span></span>
-      <span class="pay-badge cash">Cash App · @CHEWPay</span>
-      <span class="pay-badge venmo">Venmo · @CHEWPay</span>
+      <span class="pay-badge check" style="color:#cfcfcf; border-color:#cfcfcf;">🧾 Check</span>
       <span class="pay-badge" style="color:#2563eb; border-color:#2563eb;">💳 Credit Card</span>
     </div>
   </div>
@@ -1659,14 +1661,14 @@
       <div class="section-label">Our Story</div>
       <h2 class="section-title">How CHEW <span>Got Started</span></h2>
       <div class="about-story">
-        <p>You know the feeling. You look out at your own property and see everything you've been meaning to deal with. The brush that crept in and took over. The pile that started as "I'll use that someday" and became an eyesore. The garage you can't park in. The structure you keep walking past, telling yourself it's fine — until the day you find rattlesnakes have moved in and made it theirs.</p>
-        <p>I know that feeling because it was my place. I'm a Central Texas landowner. I've got a gravel drive that fights me every season and land that goes from clear to unusable faster than you'd believe. I let it slide too long, same as anybody.</p>
-        <p>Here's what that taught me: <b>property is like a vehicle. Ignore it long enough and it costs you more than it ever should have.</b></p>
-        <p>So I quit waiting on somebody else. I bought a skid steer, ran the attachments, and took my place back. Then a friend asked for help. Then a neighbor. Turns out I love this work — there's nothing like watching unusable land turn back into something you're proud of. When I retired, CHEW wasn't a question. It was the obvious next move.</p>
+        <p>You know the feeling. You look out across your own property and can't even walk it anymore. Cedar and brush crept in a little at a time, and now it's a wall — choking out the grass, swallowing fence lines, hiding snakes and whatever else you'd rather not think about. Land you're paying taxes on every year, and you can't graze it, build on it, hunt it, or even get to the back of it.</p>
+        <p>I know that feeling because it was my place. I'm a Central Texas landowner. I watched good acreage go from open to unusable faster than you'd believe — cedar doesn't ask permission, and it doesn't quit. I let it slide too long, same as anybody. And the longer it sat, the bigger the job got.</p>
+        <p>Here's what that taught me: <b>land is like anything else you own. Ignore it long enough and it costs you more than it ever should have.</b></p>
+        <p>So I quit waiting on somebody else. I bought a skid steer, ran the mulcher, and took my place back — turned a tangled mess back into open, usable ground. Then a friend asked for help with their place. Then a neighbor. Turns out I love this work — there's nothing like watching a property go from a brush pile to land you'd be proud to stand on. When I retired, CHEW wasn't a question. It was the obvious next move.</p>
         <p>But there was a second reason, and it's the one that really lit the fire.</p>
-        <p>I've hired a lot of contractors over the years. A few were great. Most were a headache. Late, if they showed at all. A few hours of work stretched into weeks. The job dragged, the price climbed, and more than once I was left with their trash blowing across my property after they'd cashed the check. I got sick of it. You probably have too.</p>
-        <p>I built CHEW to be the opposite of all that. I show up when I said I would. I do the work, all of it, and I haul off every scrap before I leave. I price the whole job, not the hour, so you're never watching the clock and wondering what it's going to cost you. And when something's not right — because nobody's flawless — I own it and I fix it on my dime, not yours.</p>
-        <p>That's the whole thing. Right equipment, right work ethic, and a man who treats your property like he treats his own.</p>
+        <p>I've hired a lot of contractors over the years. A few were great. Most were a headache. Late, if they showed at all. A few hours of work stretched into weeks. The job dragged, the price climbed, and more than once I was left with a half-finished mess after they'd cashed the check. I got sick of it. You probably have too.</p>
+        <p>I built CHEW to be the opposite of all that. I show up when I said I would. I clear it, mulch it, and leave the ground the way I'd want my own to look. I price the whole job, not the hour, so you're never watching the clock and wondering what it's going to cost you. And when something's not right — because nobody's flawless — I own it and I fix it on my dime, not yours.</p>
+        <p>That's the whole thing. Right equipment, right work ethic, and a man who treats your land like he treats his own.</p>
         <p><b>One problem. One call. One solution. That's CHEW.</b></p>
       </div>
     </div>
@@ -1717,7 +1719,7 @@
         </div>
         <div class="faq-item">
           <div class="faq-q">What forms of payment do you accept?</div>
-          <div class="faq-a">Cash, credit and debit cards, Cash App, and Venmo. Ask about our cash discount.</div>
+          <div class="faq-a">Cash, check, and credit and debit cards. Ask about our cash discount.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Do you charge by the hour or by the job?</div>
