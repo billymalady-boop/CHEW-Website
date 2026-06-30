@@ -1023,15 +1023,16 @@
       border-top: 1px solid var(--border);
     }
     .faq-grid {
-      columns: 2;
-      column-gap: 48px;
       margin-top: 40px;
     }
     .faq-category {
-      break-inside: auto;
+      margin-bottom: 48px;
+    }
+    .faq-items {
+      columns: 2;
+      column-gap: 48px;
     }
     .faq-cat-title {
-      break-after: avoid-column;
       font-family: var(--font-display);
       font-size: 13px;
       font-weight: 700;
@@ -1061,7 +1062,7 @@
       line-height: 1.75;
     }
     @media (max-width: 768px) {
-      .faq-grid { columns: 1; }
+      .faq-items { columns: 1; }
     }
 
     /* ── FOOTER ── */
@@ -1697,6 +1698,7 @@
 
       <div class="faq-category">
         <div class="faq-cat-title">General</div>
+        <div class="faq-items">
         <div class="faq-item">
           <div class="faq-q">What areas do you service?</div>
           <div class="faq-a">We serve Coryell, Bell, and Lampasas counties and surrounding communities within a 60-mile radius of Coryell County. Not sure if you're in range? Call or text 737-235-1335 and we'll tell you straight.</div>
@@ -1729,10 +1731,12 @@
           <div class="faq-q">Are there hidden fees?</div>
           <div class="faq-a">No. We discuss all expected costs before work begins.</div>
         </div>
+        </div>
       </div>
 
       <div class="faq-category">
         <div class="faq-cat-title">Services</div>
+        <div class="faq-items">
         <div class="faq-item">
           <div class="faq-q">What's the difference between brush clearing and forestry mulching?</div>
           <div class="faq-a">Brush clearing knocks down and clears brush, saplings, and overgrowth — it's faster and more affordable. Forestry mulching fully grinds vegetation into fine mulch left on-site as ground cover, which gives a cleaner finish and helps slow regrowth. We'll recommend the right option based on your goals and the density of what's out there.</div>
@@ -1776,6 +1780,7 @@
         <div class="faq-item">
           <div class="faq-q">Do you offer volume discounts?</div>
           <div class="faq-a">Yes. Larger clearing jobs reduce our per-acre setup and mobilization costs, and we pass that savings on. Properties three acres and larger qualify for a reduced per-acre rate — ask for details when you request your estimate.</div>
+        </div>
         </div>
       </div>
 
