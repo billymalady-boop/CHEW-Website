@@ -286,6 +286,9 @@
       color: var(--yellow);
       display: block;
     }
+    .hero-headline .hl-yellow {
+      color: var(--yellow);
+    }
     .hero-tagline {
       font-family: var(--font-display);
       font-size: clamp(34px, 4vw, 52px);
@@ -1210,8 +1213,7 @@
     <div class="hero-content">
       <div class="hero-badge">Coryell · Bell · Lampasas Counties</div>
       <h1 class="hero-headline">
-        Take Your<br>
-        <em>Land</em>
+        Take Your <span class="hl-yellow">Land</span><br>
         Back.
       </h1>
       <p class="hero-sub" style="font-size:15px; margin-bottom:8px;">CHEW — Central Texas land clearing &amp; site services for homeowners, landowners, and ranchers.</p>
@@ -1617,6 +1619,20 @@
           </iframe>
         </div>
         <div class="gallery-label">Before &amp; After</div>
+      </div>
+      <div class="gallery-item phone">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <iframe
+              src="https://www.youtube.com/embed/yrf8-vdWXaw?rel=0&showinfo=0"
+              title="CHEW Driveway Restore"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <div class="gallery-label">Driveway Restore</div>
       </div>
     </div>
   </div>
