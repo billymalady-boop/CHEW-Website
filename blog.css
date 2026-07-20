@@ -1152,3 +1152,11 @@
 .article-cta .phone{font-family:var(--font-display);font-weight:900;font-size:34px;color:var(--yellow,#F5C400);display:block;margin:6px 0 14px;}
 .back-link{display:inline-block;margin:26px 0 0;font-family:var(--font-display);font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:13px;color:var(--yellow,#F5C400);}
 @media(max-width:640px){.blog-hero h1{font-size:34px;}.article h1{font-size:30px;}}
+
+
+/* Article tables */
+.article-body table{width:100%;border-collapse:collapse;margin:8px 0 22px;font-size:16px;}
+.article-body th,.article-body td{border:1px solid #2a2a2a;padding:10px 14px;text-align:left;}
+.article-body thead th{background:#161616;color:#fff;font-family:var(--font-display);text-transform:uppercase;letter-spacing:.5px;font-size:14px;}
+.article-body tbody tr:nth-child(even){background:#131313;}
+.article-body td:last-child{color:var(--yellow,#F5C400);font-weight:600;white-space:nowrap;}
