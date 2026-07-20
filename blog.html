@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog | CHEW — Land Clearing & Site Services | Central Texas</title>
+<meta name="description" content="Practical tips on land clearing, forestry mulching, brush control, and gravel driveways for Central Texas property owners. From CHEW — serving Coryell, Bell, and Lampasas counties." />
+<link rel="canonical" href="https://www.callchew.com/blog.html" />
+<meta property="og:title" content="CHEW Blog — Land Clearing & Driveway Tips for Central Texas" />
+<meta property="og:description" content="Straight talk on clearing overgrown land, controlling cedar, and building driveways that last. Serving Coryell, Bell, and Lampasas counties." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.callchew.com/blog.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+
+<header id="nav">
+  <nav class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="CHEW Central Texas Site Services">
+      <div class="nav-logo-fallback" style="display:block">
+        <div class="chew-word">CHEW</div>
+        <div class="chew-sub">Central Texas Site Services</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#clearkeep">Care Plan</a>
+      <a href="index.html#why">Why CHEW</a>
+      <a href="index.html#about">Our Story</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#area">Service Area</a>
+      <a href="estimate.html" class="btn-primary nav-cta">Free Estimate</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#services" onclick="closeMobile()">Services</a>
+    <a href="index.html#clearkeep" onclick="closeMobile()">Care Plan</a>
+    <a href="index.html#why" onclick="closeMobile()">Why CHEW</a>
+    <a href="index.html#about" onclick="closeMobile()">Our Story</a>
+    <a href="blog.html" onclick="closeMobile()">Blog</a>
+    <a href="index.html#gallery" onclick="closeMobile()">Gallery</a>
+    <a href="index.html#area" onclick="closeMobile()">Service Area</a>
+    <a href="estimate.html" class="btn-primary" onclick="closeMobile()">Free Estimate</a>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <div class="container">
+    <div class="section-label">CHEW Journal</div>
+    <h1>Land, Cleared &amp; <span style="color:var(--yellow,#F5C400)">Explained</span></h1>
+    <p>Straight talk on clearing overgrown property, keeping cedar in check, and building driveways that actually hold up — from a Central Texas landowner who does the work.</p>
+  </div>
+</section>
+
+<main>
+  <div class="container">
+    <div class="post-grid">
+
+      <article class="post-card">
+        <a class="cover" href="gravel-driveway-repair-central-texas.html">
+          <img src="Gravel_Drive.jpg" alt="Gravel driveway repair and grading in Central Texas" loading="lazy" />
+        </a>
+        <div class="body">
+          <span class="post-tag">Driveways</span>
+          <h3><a href="gravel-driveway-repair-central-texas.html">Gravel Driveway Repair in Central Texas: Fix the Ruts for Good</a></h3>
+          <p class="excerpt">Potholes and washouts don't fix themselves — and fresh gravel dumped on a bad base just disappears. Here's how a driveway is actually restored so the water runs off instead of tearing it apart.</p>
+          <span class="post-meta">July 2026 · 6 min read</span>
+          <a class="readmore" href="gravel-driveway-repair-central-texas.html">Read article &rarr;</a>
+        </div>
+      </article>
+
+      <!-- ADD NEW ARTICLE CARDS ABOVE THIS LINE. Copy the block above; change the
+           link, image, tag, title, excerpt, and date. -->
+
+    </div>
+  </div>
+</main>
+
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="chew-word">CHEW</div>
+        <div class="chew-full">Land Clearing &amp; Site Services</div>
+        <p>Central Texas land clearing &amp; site services. Serving Coryell, Bell, and Lampasas counties with dependable forestry mulching, brush cutting, stump grinding, gravel driveways, and site prep.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li>Forestry Mulching &amp; Land Clearing</li>
+          <li>Brush &amp; Field Cutting</li>
+          <li>Stump Grinding</li>
+          <li>Trail Cutting</li>
+          <li>Gravel Driveways</li>
+          <li>Site Prep &amp; Grading</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:7372351335">737-235-1335</a></li>
+          <li><a href="mailto:chew.earthworks@gmail.com">chew.earthworks@gmail.com</a></li>
+          <li>Coryell County, TX</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CHEW — Central Texas Site Services. All rights reserved.</p>
+      <p class="footer-lic">Licensed &amp; Insured · Coryell County, TX</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  function closeMobile() { mobileMenu.classList.remove('open'); }
+</script>
+</body>
+</html>
