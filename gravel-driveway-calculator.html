@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gravel Driveway Calculator | How Much Gravel Do You Need? | CHEW</title>
+<meta name="description" content="Free gravel driveway calculator — enter length, width & depth to estimate the tons of gravel and material cost for your Central Texas driveway. From CHEW Land Clearing." />
+<link rel="canonical" href="https://www.callchew.com/gravel-driveway-calculator.html" />
+<meta property="og:title" content="Gravel Driveway Calculator — How Much Gravel Do You Need? | CHEW" />
+<meta property="og:description" content="Estimate the tons of gravel and material cost for your driveway in seconds. Free tool from CHEW Land Clearing, Central Texas." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.callchew.com/gravel-driveway-calculator.html" />
+<meta property="og:image" content="https://www.callchew.com/og-home.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gravel Driveway Calculator | CHEW" />
+<meta name="twitter:image" content="https://www.callchew.com/og-home.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="blog.css" />
+<style>
+  .calc-wrap{max-width:760px;margin:0 auto;}
+  .calc-card{background:#161616;border:1px solid #2a2a2a;border-radius:14px;padding:24px;margin:8px 0 20px;}
+  .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:560px){.calc-grid{grid-template-columns:1fr;}}
+  .calc-field label{display:block;font-family:var(--font-display);text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:#cfcfcf;margin-bottom:6px;}
+  .calc-field input,.calc-field select{width:100%;background:#0d0d0d;border:1px solid #2a2a2a;border-radius:8px;color:#fff;font-size:16px;padding:11px 12px;font-family:var(--font-body);}
+  .calc-field input:focus,.calc-field select:focus{outline:none;border-color:var(--yellow,#F5C400);}
+  .calc-out{background:linear-gradient(160deg,#1a1a1a,#0d0d0d);border:2px solid var(--yellow,#F5C400);border-radius:12px;padding:22px;margin-top:18px;text-align:center;}
+  .calc-out .big{font-family:var(--font-display);font-weight:900;font-size:40px;color:var(--yellow,#F5C400);line-height:1;}
+  .calc-out .lbl{font-family:var(--font-display);text-transform:uppercase;letter-spacing:1px;font-size:13px;color:#bbb;margin-top:4px;}
+  .calc-row{display:flex;justify-content:space-around;flex-wrap:wrap;gap:16px;margin-top:16px;}
+  .calc-row .item{min-width:120px;}
+  .calc-row .num{font-family:var(--font-display);font-weight:800;font-size:24px;color:#fff;}
+  .calc-row .cap{font-size:12px;color:#999;text-transform:uppercase;letter-spacing:.5px;}
+</style>
+</head>
+<body>
+
+<header id="nav">
+  <nav class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="CHEW Central Texas Site Services">
+      <div class="nav-logo-fallback" style="display:block"><div class="chew-word">CHEW</div><div class="chew-sub">Central Texas Site Services</div></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#clearkeep">Care Plan</a>
+      <a href="index.html#why">Why CHEW</a>
+      <a href="index.html#about">Our Story</a>
+      <a href="blog.html">Learning Center</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="estimate.html" class="btn-primary nav-cta">Free Estimate</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#services" onclick="closeMobile()">Services</a>
+    <a href="index.html#clearkeep" onclick="closeMobile()">Care Plan</a>
+    <a href="index.html#why" onclick="closeMobile()">Why CHEW</a>
+    <a href="index.html#about" onclick="closeMobile()">Our Story</a>
+    <a href="blog.html" onclick="closeMobile()">Learning Center</a>
+    <a href="podcast.html" onclick="closeMobile()">Podcast</a>
+    <a href="index.html#gallery" onclick="closeMobile()">Gallery</a>
+    <a href="estimate.html" class="btn-primary" onclick="closeMobile()">Free Estimate</a>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <div class="container">
+    <div class="section-label">Free Tool</div>
+    <h1>Gravel Driveway <span style="color:var(--yellow,#F5C400)">Calculator</span></h1>
+    <p>Enter your driveway's size and get an instant estimate of how many tons of gravel you'll need — and a ballpark material cost. Built for Central Texas driveways.</p>
+  </div>
+</section>
+
+<main>
+  <div class="container calc-wrap">
+    <div class="calc-card">
+      <div class="calc-grid">
+        <div class="calc-field"><label for="len">Length (feet)</label><input id="len" type="number" min="0" value="100" inputmode="decimal"></div>
+        <div class="calc-field"><label for="wid">Width (feet)</label><input id="wid" type="number" min="0" value="12" inputmode="decimal"></div>
+        <div class="calc-field"><label for="dep">Gravel depth (inches)</label><input id="dep" type="number" min="0" value="4" inputmode="decimal"></div>
+        <div class="calc-field"><label for="ppt">Price per ton ($) <span style="text-transform:none;color:#888;">— your local rate</span></label><input id="ppt" type="number" min="0" value="45" inputmode="decimal"></div>
+      </div>
+
+      <div class="calc-out">
+        <div class="big" id="tons">—</div>
+        <div class="lbl">Tons of gravel needed</div>
+        <div class="calc-row">
+          <div class="item"><div class="num" id="area">—</div><div class="cap">Sq ft</div></div>
+          <div class="item"><div class="num" id="yards">—</div><div class="cap">Cubic yards</div></div>
+          <div class="item"><div class="num" id="cost">—</div><div class="cap">Est. material cost</div></div>
+        </div>
+      </div>
+      <p style="color:#999;font-size:12.5px;margin:14px 0 0;">Estimate assumes crushed gravel/road base (~1.4 tons per cubic yard). Round up when ordering — it's better to have a little extra than to come up short.</p>
+    </div>
+
+    <div class="article-body">
+      <h2>How This Calculator Works</h2>
+      <p>It takes your driveway's <strong>length × width × depth</strong>, converts that to cubic yards, and multiplies by the weight of crushed gravel (about 1.4 tons per cubic yard) to tell you roughly how many tons to order. Then it multiplies by your local price per ton for a material-cost ballpark. For a new driveway, 4 inches of gravel is a common starting depth; a refresh over an existing base can be less.</p>
+
+      <blockquote>Important: this is a <strong>material-only</strong> estimate and a planning tool — not a quote. Delivery, base prep, grading, crowning, and compaction are priced separately, and every driveway is quoted as a whole after an on-site look, with a minimum job price. Prices per ton vary by supplier and location, which is why that field is yours to set.</blockquote>
+
+      <h2>Gravel Alone Won't Make a Driveway Last</h2>
+      <p>The tonnage is the easy part. Whether a driveway <em>holds up</em> comes down to shape and drainage — a proper crown so water sheds to the sides, a solid base, and real compaction. Dump gravel into a rut without fixing the shape and it washes right back out. (Here's the full breakdown: <a href="gravel-driveway-repair-central-texas.html">why gravel driveways fail and how to fix them for good</a>.)</p>
+
+      <h2>Want It Done Right?</h2>
+      <p>CHEW installs and repairs gravel driveways across Coryell, Bell &amp; Lampasas counties — we arrange the material and handle the base prep, grading, crown, and compaction so the driveway sheds water and lasts. See our <a href="gravel-driveways.html">gravel driveway service</a> or get a free estimate.</p>
+    </div>
+  </div>
+
+  <div class="article-cta" style="max-width:760px;">
+    <h3>Get a Real Driveway Quote</h3>
+    <p>Free, no-obligation on-site estimate across Coryell, Bell &amp; Lampasas counties. Text a few photos and we can often give you a ballpark before we drive out.</p>
+    <span class="phone">737-235-1335</span>
+    <a href="estimate.html" class="btn-primary">Request a Free Estimate</a>
+  </div>
+</main>
+
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="chew-word">CHEW</div><div class="chew-full">Land Clearing &amp; Site Services</div>
+        <p>Central Texas land clearing &amp; site services. Serving Coryell, Bell, and Lampasas counties with dependable forestry mulching, brush cutting, stump grinding, gravel driveways, and site prep.</p></div>
+      <div class="footer-col"><h3>Services</h3><ul>
+        <li><a href="forestry-mulching.html">Forestry Mulching</a></li>
+        <li><a href="land-clearing.html">Land Clearing</a></li>
+        <li><a href="cedar-removal.html">Cedar Removal</a></li>
+        <li><a href="gravel-driveways.html">Gravel Driveways</a></li>
+        <li><a href="site-preparation.html">Site Prep &amp; Grading</a></li>
+        <li><a href="stump-grinding.html">Stump Grinding</a></li>
+      </ul></div>
+      <div class="footer-col"><h3>Contact</h3><ul>
+        <li><a href="tel:7372351335">737-235-1335</a></li>
+        <li><a href="mailto:chew.earthworks@gmail.com">chew.earthworks@gmail.com</a></li>
+        <li>Coryell County, TX</li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 CHEW — Central Texas Site Services. All rights reserved.</p><p class="footer-lic">Licensed &amp; Insured · Coryell County, TX</p></div>
+  </div>
+</footer>
+
+<script>
+  const hamburger=document.getElementById('hamburger'), mobileMenu=document.getElementById('mobile-menu');
+  hamburger.addEventListener('click',()=>mobileMenu.classList.toggle('open'));
+  function closeMobile(){mobileMenu.classList.remove('open');}
+  function n(id){return parseFloat(document.getElementById(id).value)||0;}
+  function fmt(x){return x.toLocaleString('en-US');}
+  function calc(){
+    const L=n('len'),W=n('wid'),D=n('dep'),P=n('ppt');
+    const area=L*W;
+    const cuft=area*(D/12);
+    const yards=cuft/27;
+    const tons=yards*1.4;
+    document.getElementById('area').textContent=area?fmt(Math.round(area)):'—';
+    document.getElementById('yards').textContent=yards?fmt(Math.round(yards*10)/10):'—';
+    document.getElementById('tons').textContent=tons?(Math.round(tons*10)/10):'—';
+    const cost=tons*P;
+    document.getElementById('cost').textContent=cost?('$'+fmt(Math.round(cost/10)*10)):'—';
+  }
+  ['len','wid','dep','ppt'].forEach(id=>document.getElementById(id).addEventListener('input',calc));
+  calc();
+</script>
+</body>
+</html>
