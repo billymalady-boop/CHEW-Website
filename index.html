@@ -1193,7 +1193,17 @@
       .services-grid { grid-template-columns: 1fr; }
       .hero-actions { flex-direction: column; align-items: flex-start; }
     }
-  </style>
+  
+    /* Mobile sticky call/estimate bar */
+    .mobile-cta-bar{display:none;}
+    @media (max-width:820px){
+      .mobile-cta-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#0d0d0d;border-top:2px solid #F5C400;padding:8px;gap:8px;box-shadow:0 -4px 14px rgba(0,0,0,.45);}
+      .mobile-cta-bar a{flex:1;text-align:center;padding:14px 8px;border-radius:8px;font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.5px;font-size:16px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;line-height:1;}
+      .mcta-call{background:#1c1c1c;color:#fff;border:1px solid #4a4a4a;}
+      .mcta-quote{background:#F5C400;color:#0d0d0d;}
+      body{padding-bottom:76px;}
+    }
+</style>
 
 <script type="application/ld+json">
 {
@@ -2132,5 +2142,11 @@
   });
 </script>
 
+
+<!-- Mobile sticky call/estimate bar -->
+<div class="mobile-cta-bar">
+  <a class="mcta-call" href="tel:7372351335">&#128222; Call / Text</a>
+  <a class="mcta-quote" href="estimate.html">Free Estimate</a>
+</div>
 </body>
 </html>
